@@ -1,0 +1,30 @@
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.book__spread {
+  display: flex;
+  min-height: 60vh;
+  max-width: 960px;
+  width: 100%;
+  gap: 0;
+}
+
+.book__page {
+  flex: 1;
+  min-height: 100%;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.book__page--left {
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+
+.book__page--right {
+  border-radius: 0 4px 4px 0;
+}
