@@ -1,5 +1,148 @@
-import { forwardRef } from 'react'
+import { forwardRef, Fragment } from 'react'
 import type { WeaponSpell } from '../data/weaponSpells'
+
+/** Ligne « Libellé: a | b | c » (stats à paliers type tooltip Albion). */
+function parsePipeStatLine(line: string): { label: string; valuePart: string } | null {
+  const colon = line.indexOf(':')
+  if (colon === -1) return null
+  const label = line.slice(0, colon).trim()
+  const valuePart = line.slice(colon + 1).trim()
+  if (!valuePart.includes('|')) return null
+  const segments = valuePart.split('|').map((s) => s.trim()).filter(Boolean)
+  if (segments.length < 2) return null
+  return { label, valuePart }
+}
+
+type DescBlock =
+  | { type: 'text'; lines: string[] }
+  | { type: 'stat'; label: string; valuePart: string }
+
+function splitDescriptionBlocks(description: string): DescBlock[] {
+  const lines = description.split('\n')
+  const blocks: DescBlock[] = []
+  let textBuffer: string[] = []
+
+  const flushText = () => {
+    if (textBuffer.length === 0) return
+    blocks.push({ type: 'text', lines: [...textBuffer] })
+    textBuffer = []
+  }
+
+  for (const line of lines) {
+    const stat = parsePipeStatLine(line)
+    if (stat) {
+      flushText()
+      blocks.push({ type: 'stat', label: stat.label, valuePart: stat.valuePart })
+    } else {
+      textBuffer.push(line)
+    }
+  }
+  flushText()
+  return blocks
+}
+
+function isDamageStatLabel(label: string): boolean {
+  const l = label.trim().toLowerCase()
+  return (
+    l === 'damage' ||
+    l === 'physical damage' ||
+    l === 'magical damage' ||
+    l.endsWith(' damage')
+  )
+}
+
+/** Soins / vol de vie (valeurs + | en vert). */
+function isHealStatLabel(label: string): boolean {
+  if (isDamageStatLabel(label)) return false
+  const l = label.trim().toLowerCase()
+  if (l === 'lifesteal') return true
+  if (l === 'healing') return true
+  if (
+    l.startsWith('healing') &&
+    !l.includes('reduction') &&
+    !l.includes('negat') &&
+    !l.includes('received')
+  ) {
+    return true
+  }
+  return false
+}
+
+/** Libellés de stats « débuff » (valeurs + | en violet, style tooltip Albion). */
+function isDebuffStatLabel(label: string): boolean {
+  if (isDamageStatLabel(label)) return false
+  if (isHealStatLabel(label)) return false
+  const l = label.trim().toLowerCase()
+  if (l === 'slow' || l.startsWith('slow ')) return true
+  if (l.includes('resistance reduction')) return true
+  if (l.includes('fear duration')) return true
+  if (l.includes('silence duration')) return true
+  if (l.includes('stun duration')) return true
+  if (l.includes('root duration')) return true
+  if (l.includes('snare') && l.includes('duration')) return true
+  if (l.includes('healing reduction')) return true
+  if (l.includes('healing received') && l.includes('reduc')) return true
+  if (l.includes('debuff duration')) return true
+  return false
+}
+
+function DescriptionContent({ description }: { description: string }) {
+  const blocks = splitDescriptionBlocks(description)
+  return (
+    <>
+      {blocks.map((block, i) =>
+        block.type === 'text' ? (
+          <p key={i} className="page__desc-para">
+            {block.lines.join('\n')}
+          </p>
+        ) : (
+          <p key={i} className="page__desc-stat">
+            <span className="page__desc-stat-bullet" aria-hidden="true">
+              ■
+            </span>
+            <span className="page__desc-stat-inner">
+              <span className="page__desc-stat-label">{block.label}:</span>{' '}
+              <span className="page__desc-stat-values">
+                {block.valuePart
+                  .split('|')
+                  .map((s) => s.trim())
+                  .filter(Boolean)
+                  .map((part, j) => {
+                    const damage = isDamageStatLabel(block.label)
+                    const heal = isHealStatLabel(block.label)
+                    const debuff = isDebuffStatLabel(block.label)
+                    const sepClass = debuff
+                      ? 'page__desc-stat-sep page__desc-stat-sep--debuff'
+                      : heal
+                        ? 'page__desc-stat-sep page__desc-stat-sep--heal'
+                        : 'page__desc-stat-sep'
+                    const valueClass = damage
+                      ? 'page__desc-stat-value page__desc-stat-value--damage'
+                      : heal
+                        ? 'page__desc-stat-value page__desc-stat-value--heal'
+                        : debuff
+                          ? 'page__desc-stat-value page__desc-stat-value--debuff'
+                          : 'page__desc-stat-value'
+                    return (
+                      <Fragment key={j}>
+                        {j > 0 && (
+                          <span className={sepClass}>
+                            {' '}
+                            |{' '}
+                          </span>
+                        )}
+                        <span className={valueClass}>{part}</span>
+                      </Fragment>
+                    )
+                  })}
+              </span>
+            </span>
+          </p>
+        ),
+      )}
+    </>
+  )
+}
 
 export type PageProps = {
   side: 'left' | 'right'
@@ -48,12 +191,19 @@ const Page = forwardRef<HTMLDivElement, PageProps>(function Page(
             <header className="page__header">
               <SpellIcon icon={spell.icon} label={spell.spellName} />
               <div className="page__headlines">
-                <p className="page__type">{spell.weaponType}</p>
+                <p className="page__meta-row">
+                  <span className="page__type">{spell.weaponType}</span>
+                  <span className="page__meta-sep" aria-hidden="true">
+                    ·
+                  </span>
+                  <span className="page__weapon">{spell.weaponName}</span>
+                </p>
                 <h2 className="page__title">{spell.spellName}</h2>
-                <p className="page__weapon">{spell.weaponName}</p>
               </div>
             </header>
-            <p className="page__desc">{spell.description}</p>
+            <div className="page__desc">
+              <DescriptionContent description={spell.description} />
+            </div>
             <dl className="page__stats">
               <div className="page__stat">
                 <dt>Énergie</dt>
