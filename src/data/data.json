@@ -8,7 +8,7 @@
       "spell": {
         "name": "Blood Bandit",
         "icon": "https://render.albiononline.com/v1/spell/Blood Bandit.png?size=217&locale=en",
-        "description": "Combine up to two abilities. The combo resets after 10s.\n1st Blood Draw\nThrow an axe in the targeted direction, dealing physical damage to all enemies hit, based on the number of Rending Bleed Charge on them.\n2nd Blood Bandit:\nThrow an axe infused with blood magic in the targeted direction, dealing 363 physical damage\nHeals you based on the number of Rending Bleed Charges on the first enemy hit.\n\nRending Bleed Charges: 0 | 1 | 2 | 3\nDamage: 578 | 660 | 743 | 825\nLifesteal: 743 | 743 | 743 | 743",
+        "description": "Combine up to two abilities. The combo resets after 10s.\n1st Blood Draw\nThrow an axe in the targeted direction, dealing physical damage to all enemies hit, based on the number of Rending Bleed Charges on them.\n2nd Blood Bandit:\nThrow an axe infused with blood magic in the targeted direction, dealing 363 physical damage\nHeals you based on the number of Rending Bleed Charges on the first enemy hit.\n\nRending Bleed Charges: 0 | 1 | 2 | 3\nDamage: 578 | 660 | 743 | 825\nLifesteal: 743 | 743 | 743 | 743",
         "energyCost": 38,
         "castTimeS": 0,
         "castTimeLabel": "instant",
@@ -62,7 +62,7 @@
       "spell": {
         "name": "Bloody Reap",
         "icon": "https://render.albiononline.com/v1/spell/Bloody Reap.png?size=217&locale=en",
-        "description": "Reap all enemies in a 5m around' you after 1s, dealing 392 physical damage. Follow up with a second swing after 0.5s, dealing physical damage based on their current Health.\nTarget Health: Above 40%|Below 40%\nDamage: 457|870",
+        "description": "Reap all enemies in a 5m around you after 1s, dealing 392 physical damage. Follow up with a second swing after 0.5s, dealing physical damage based on their current Health.\nTarget Health: Above 40%|Below 40%\nDamage: 457|870",
         "energyCost": 63,
         "castTimeS": 0,
         "castTimeLabel": "instant",
@@ -170,7 +170,7 @@
       "spell": {
         "name": "Crescent Slash",
         "icon": "https://render.albiononline.com/v1/spell/Crescent Slash.png?size=217&locale=en",
-        "description": "Slice the air to shoot a demonic wave in the targeted direction, piercing through all enemies and dealing 660 magical damage.\nConsumes Heroic Charges for one of the following secondary effects.\n\n1 Heroic Charge: Slows by 30% for 3.53s\n2 Heroic Charges: Silences for 3.53s\n3 Heroic Charger: Deals additional 471 magical damage",
+        "description": "Slice the air to shoot a demonic wave in the targeted direction, piercing through all enemies and dealing 660 magical damage.\nConsumes Heroic Charges for one of the following secondary effects.\n\n1 Heroic Charge: Slows by 30% for 3.53s\n2 Heroic Charges: Silences for 3.53s\n3 Heroic Charges: Deals additional 471 magical damage",
         "energyCost": 51,
         "castTimeS": 0,
         "castTimeLabel": "instant",
@@ -188,7 +188,7 @@
       "spell": {
         "name": "Fearless Strike",
         "icon": "https://render.albiononline.com/v1/spell/Fearless Strike.png?size=217&locale=en",
-        "description": "Dash towards the targeted position, dealing 544 physical damage to all enemies you pass trough.\nDecreases their damage resistances for 6s based on the amount of Heroic Charges on you.\n\nHeroic Charges: 0 | 1 | 2 | 3\nResistance Reduction: 21 | 34 | 52 | 73\nConsumes all your Heroic Charges.",
+        "description": "Dash towards the targeted position, dealing 544 physical damage to all enemies you pass through.\nDecreases their damage resistances for 6s based on the amount of Heroic Charges on you.\n\nHeroic Charges: 0 | 1 | 2 | 3\nResistance Reduction: 21 | 34 | 52 | 73\nConsumes all your Heroic Charges.",
         "energyCost": 67,
         "castTimeS": 0,
         "castTimeLabel": "Instant",
@@ -242,7 +242,7 @@
       "spell": {
         "name": "Deep Leap",
         "icon": "https://render.albiononline.com/v1/spell/Deep Leap.png?size=217&locale=en",
-        "description": "Leap towards the targeted position, becoming immune to all Crowd Control effects, Debuffs, and damage until impact.\nDeals 448 physical  in a 5m radius on impact. \nSlows all enemies hit by 30% for 4.19s. Enemies within a 3m radius will be stunned for 2.52s.",
+        "description": "Leap towards the targeted position, becoming immune to all Crowd Control effects, Debuffs, and damage until impact.\nDeals 448 physical damage in a 5m radius on impact. \nSlows all enemies hit by 30% for 4.19s. Enemies within a 3m radius will be stunned for 2.52s.",
         "energyCost": 45,
         "castTimeS": 0,
         "castTimeLabel": "instant",
@@ -782,7 +782,7 @@
       "spell": {
         "name": "Demon Arrow",
         "icon": "https://render.albiononline.com/v1/spell/Demon Arrow.png?size=217&locale=en",
-        "description": "Shoot an arrow infused with demonic power in the targeted direction, piercing though all enemies. Deals physical damage to all enemies hit based on the amount of enemies the arrow has already hit(the damage can't be reflected).\nEnemies hit: 1st | 2nd | 3rd | 4th or more\nDamage: 597 | 724 | 852 | 980",
+        "description": "Shoot an arrow infused with demonic power in the targeted direction, piercing through all enemies. Deals physical damage to all enemies hit based on the amount of enemies the arrow has already hit(the damage can't be reflected).\nEnemies hit: 1st | 2nd | 3rd | 4th or more\nDamage: 597 | 724 | 852 | 980",
         "energyCost": 57,
         "castTimeS": 0,
         "castTimeLabel": "instant",

@@ -1,6 +1,80 @@
 import { forwardRef, Fragment } from 'react'
 import type { WeaponSpell } from '../data/weaponSpells'
 
+/** Espace insécable étroit avant l’unité (usage typographique FR). */
+const U_NBSP = '\u202f'
+
+function spaceBeforeSeconds(s: string): string {
+  return s.replace(/(\d+(?:\.\d+)?)s\b/gi, `$1${U_NBSP}s`)
+}
+
+function spaceBeforeMeters(s: string): string {
+  return s.replace(/(\d+(?:\.\d+)?)m\b/gi, `$1${U_NBSP}m`)
+}
+
+function localizeCastParenthetical(s: string): string {
+  return s.replace(/\s*\(\s*uninterruptible\s*\)/gi, ' (non interruptible)')
+}
+
+/** Valeurs FR pour le tableau (les titres <dt> sont déjà en français). */
+function formatCastSegment(seg: string): string {
+  let t = seg.trim()
+  if (/^instant$/i.test(t)) return 'Instantané'
+  if (/^channeled$/i.test(t)) return 'Canalisé'
+  if (/^moving channel$/i.test(t)) return 'Canalisation mobile'
+  if (/^toggle$/i.test(t)) return 'Basculer'
+  if (/^0$/i.test(t)) return `0${U_NBSP}s`
+  t = localizeCastParenthetical(t)
+  if (/\s-\s/.test(t)) {
+    return t
+      .split(/\s-\s/)
+      .map((part) => spaceBeforeSeconds(part.trim()))
+      .join(' – ')
+  }
+  return spaceBeforeSeconds(t)
+}
+
+function formatCastTimeDd(spell: WeaponSpell): string {
+  const raw = spell.castTimeLabel.trim()
+  if (raw === '') {
+    return spell.castTimeS === 0
+      ? 'Instantané'
+      : `${spell.castTimeS}${U_NBSP}s`
+  }
+  if (raw.includes('/')) {
+    return raw.split(/\s*\/\s*/).map(formatCastSegment).join(' / ')
+  }
+  return formatCastSegment(raw)
+}
+
+function formatRangeSegment(seg: string): string {
+  const t = seg.trim()
+  if (/^self$/i.test(t)) return 'Soi'
+  return spaceBeforeMeters(t)
+}
+
+function formatRangeDd(spell: WeaponSpell): string {
+  const rl = spell.rangeLabel.trim()
+  if (/^self$/i.test(rl)) return 'Soi'
+  if (rl.includes('/')) {
+    return rl.split(/\s*\/\s*/).map(formatRangeSegment).join(' / ')
+  }
+  if (/^\d+(?:\.\d+)?m$/i.test(rl)) {
+    return spaceBeforeMeters(rl)
+  }
+  return `${spell.rangeM}${U_NBSP}m`
+}
+
+function formatCooldownDd(spell: WeaponSpell): string {
+  if (typeof spell.cooldownS === 'number') {
+    return `${spell.cooldownS}${U_NBSP}s`
+  }
+  return String(spell.cooldownS)
+    .split(/\s*\/\s*/)
+    .map((p) => spaceBeforeSeconds(p.trim()))
+    .join(' / ')
+}
+
 /** Ligne « Libellé: a | b | c » (stats à paliers type tooltip Albion). */
 function parsePipeStatLine(line: string): { label: string; valuePart: string } | null {
   const colon = line.indexOf(':')
@@ -211,30 +285,15 @@ const Page = forwardRef<HTMLDivElement, PageProps>(function Page(
               </div>
               <div className="page__stat">
                 <dt>Incantation</dt>
-                <dd>
-                  {spell.castTimeLabel.toLowerCase() === 'instant' ||
-                  spell.castTimeS === 0
-                    ? spell.castTimeLabel
-                    : `${spell.castTimeS}s`}
-                </dd>
+                <dd>{formatCastTimeDd(spell)}</dd>
               </div>
               <div className="page__stat">
                 <dt>Portée</dt>
-                <dd>
-                  {spell.rangeLabel.toLowerCase() === 'self'
-                    ? 'Soi'
-                    : spell.rangeLabel.includes('/')
-                      ? spell.rangeLabel
-                      : `${spell.rangeM} m`}
-                </dd>
+                <dd>{formatRangeDd(spell)}</dd>
               </div>
               <div className="page__stat">
                 <dt>Recharge</dt>
-                <dd>
-                  {typeof spell.cooldownS === 'number'
-                    ? `${spell.cooldownS}s`
-                    : spell.cooldownS}
-                </dd>
+                <dd>{formatCooldownDd(spell)}</dd>
               </div>
             </dl>
           </>
