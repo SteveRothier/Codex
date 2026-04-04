@@ -7,6 +7,17 @@
 :root {
   --font-heading: 'Cinzel', 'Palatino Linotype', Palatino, serif;
   --font-body: Georgia, 'Times New Roman', Times, serif;
+
+  /* Matière livre */
+  --cover-leather-a: #120a0e;
+  --cover-leather-b: #1f1218;
+  --cover-leather-c: #2a1822;
+  --cover-gold: rgba(201, 162, 39, 0.55);
+  --cover-gold-dim: rgba(139, 105, 20, 0.35);
+  --paper-base: #1c1914;
+  --paper-mid: #242018;
+  --paper-fiber: rgba(92, 78, 58, 0.12);
+  --paper-edge: rgba(45, 38, 32, 0.9);
 }
 
 html {
@@ -59,8 +70,9 @@ textarea {
   display: flex;
   justify-content: center;
   width: 100%;
-  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.55))
-    drop-shadow(0 0 36px rgba(88, 28, 135, 0.22));
+  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 6px 12px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0 40px rgba(88, 28, 135, 0.2));
 }
 
 .book__stf {
@@ -77,31 +89,130 @@ textarea {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1.75rem 1.25rem;
+  padding: 1.75rem 1.35rem;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(201, 162, 39, 0.45);
+  isolation: isolate;
+  border: 2px solid var(--cover-gold-dim);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.5),
+    0 4px 14px rgba(0, 0, 0, 0.65);
+}
+
+/* Tranche simulée (pages sous la couverture) */
+.cover__page-stack {
+  position: absolute;
+  top: 3%;
+  bottom: 3%;
+  width: 10px;
+  pointer-events: none;
+  z-index: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    #1a1612 0px,
+    #1a1612 1px,
+    #0f0d0b 1px,
+    #0f0d0b 2px
+  );
+  box-shadow:
+    inset 2px 0 4px rgba(0, 0, 0, 0.45),
+    inset -1px 0 2px rgba(255, 255, 255, 0.03);
+  opacity: 0.92;
+}
+
+.cover--front .cover__page-stack {
+  right: 0;
+  border-radius: 0 2px 2px 0;
+  transform: translateX(35%);
+}
+
+.cover--back .cover__page-stack {
+  left: 0;
+  border-radius: 2px 0 0 2px;
+  transform: translateX(-35%);
+}
+
+/* Cadre cartonné / épaisseur plats */
+.cover__board {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.cover__board--outer {
+  inset: 5px;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 2px var(--cover-gold-dim),
+    inset 0 0 20px rgba(0, 0, 0, 0.35),
+    inset 3px 3px 12px rgba(255, 255, 255, 0.03);
+}
+
+/* Bords éclairés / usure */
+.cover__bevel {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: inherit;
+  box-shadow:
+    inset 5px 0 18px rgba(0, 0, 0, 0.35),
+    inset -4px 0 14px rgba(0, 0, 0, 0.25),
+    inset 0 5px 14px rgba(255, 255, 255, 0.04),
+    inset 0 -6px 16px rgba(0, 0, 0, 0.45);
 }
 
 .cover--front {
-  border-radius: 10px 4px 4px 10px;
+  border-radius: 12px 5px 5px 12px;
   background:
     radial-gradient(
-      ellipse 80% 60% at 50% 40%,
-      rgba(88, 28, 135, 0.35),
-      transparent 65%
+      ellipse 70% 55% at 35% 35%,
+      rgba(88, 40, 90, 0.22),
+      transparent 60%
     ),
-    linear-gradient(145deg, #1a0f22 0%, #0d0812 45%, #120a18 100%);
+    radial-gradient(
+      ellipse 100% 80% at 100% 50%,
+      rgba(0, 0, 0, 0.55),
+      transparent 45%
+    ),
+    linear-gradient(
+      118deg,
+      var(--cover-leather-c) 0%,
+      var(--cover-leather-b) 38%,
+      var(--cover-leather-a) 72%,
+      #080506 100%
+    );
 }
 
 .cover--back {
-  border-radius: 4px 10px 10px 4px;
-  background: linear-gradient(145deg, #151018 0%, #0a060e 100%);
+  border-radius: 5px 12px 12px 5px;
+  background:
+    radial-gradient(
+      ellipse 100% 80% at 0% 50%,
+      rgba(0, 0, 0, 0.5),
+      transparent 45%
+    ),
+    linear-gradient(
+      242deg,
+      var(--cover-leather-a) 0%,
+      var(--cover-leather-b) 45%,
+      #0c080a 100%
+    );
+}
+
+.cover--back .cover__bevel {
+  box-shadow:
+    inset -5px 0 18px rgba(0, 0, 0, 0.35),
+    inset 4px 0 14px rgba(0, 0, 0, 0.25),
+    inset 0 5px 14px rgba(255, 255, 255, 0.03),
+    inset 0 -6px 16px rgba(0, 0, 0, 0.45);
 }
 
 .cover__inner {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   max-width: 14rem;
 }
 
@@ -176,29 +287,131 @@ textarea {
   padding: 1.75rem 1.5rem;
   text-align: left;
   overflow: hidden;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.04) 0%,
-      transparent 40%
-    ),
-    #141018;
-  border: 1px solid rgba(201, 162, 39, 0.35);
+  isolation: isolate;
   position: relative;
+  border: 1px solid rgba(55, 48, 40, 0.85);
+  background-color: var(--paper-base);
+  background-image:
+    radial-gradient(
+      ellipse 120% 80% at 50% 0%,
+      rgba(255, 248, 235, 0.04),
+      transparent 55%
+    ),
+    linear-gradient(
+      165deg,
+      var(--paper-mid) 0%,
+      var(--paper-base) 48%,
+      #16130f 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -3px 12px rgba(0, 0, 0, 0.2);
 }
 
-.page::before {
-  content: '';
+/* Texture fibres / grain papier */
+.page__texture {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
   border-radius: inherit;
-  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.35);
+  opacity: 0.55;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.14) 0%,
+      transparent 14%,
+      transparent 86%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      var(--paper-fiber) 3px,
+      var(--paper-fiber) 4px
+    ),
+    repeating-linear-gradient(
+      88deg,
+      transparent,
+      transparent 17px,
+      rgba(70, 58, 45, 0.04) 17px,
+      rgba(70, 58, 45, 0.04) 18px
+    );
+  mix-blend-mode: soft-light;
+}
+
+/* Ombre gouttière (pli au centre du livre) */
+.page__gutter-shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  max-width: 120px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.page--left .page__gutter-shadow {
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.12) 35%,
+    rgba(0, 0, 0, 0.42) 100%
+  );
+}
+
+.page--right .page__gutter-shadow {
+  left: 0;
+  background: linear-gradient(
+    270deg,
+    transparent,
+    rgba(0, 0, 0, 0.12) 35%,
+    rgba(0, 0, 0, 0.42) 100%
+  );
+}
+
+/* Épaisseur : tranche de pages (côté extérieur) */
+.page__fore-edge {
+  position: absolute;
+  top: 2%;
+  bottom: 2%;
+  width: 7px;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 1px;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--paper-edge) 0px,
+    var(--paper-edge) 1px,
+    #0c0a08 1px,
+    #0c0a08 2px
+  );
+  box-shadow:
+    inset 1px 0 2px rgba(255, 255, 255, 0.04),
+    inset -2px 0 4px rgba(0, 0, 0, 0.5),
+    2px 0 6px rgba(0, 0, 0, 0.35);
+  opacity: 0.88;
+}
+
+.page--left .page__fore-edge {
+  left: 0;
+  transform: translateX(-15%);
+}
+
+.page--right .page__fore-edge {
+  right: 0;
+  transform: translateX(15%);
+  box-shadow:
+    inset -1px 0 2px rgba(255, 255, 255, 0.04),
+    inset 2px 0 4px rgba(0, 0, 0, 0.5),
+    -2px 0 6px rgba(0, 0, 0, 0.35);
 }
 
 .page__inner {
   position: relative;
-  z-index: 0;
+  z-index: 3;
 }
 
 .page.flip-book-page {
@@ -302,10 +515,22 @@ textarea {
     margin-top: 1rem;
   }
 
+  .cover__page-stack {
+    width: 7px;
+  }
+
   .page.flip-book-page.page--left,
   .page.flip-book-page.page--right {
     border-radius: 8px;
-    border: 1px solid rgba(201, 162, 39, 0.35);
+    border: 1px solid rgba(55, 48, 40, 0.85);
     padding: 1.35rem 1.25rem;
+  }
+
+  .page__fore-edge {
+    width: 5px;
+  }
+
+  .page__gutter-shadow {
+    max-width: 72px;
   }
 }

@@ -16,6 +16,9 @@ const Page = forwardRef<HTMLDivElement, PageProps>(function Page(
       className={`page page--${side} flip-book-page`}
       aria-label={side === 'left' ? 'Page gauche' : 'Page droite'}
     >
+      <span className="page__fore-edge" aria-hidden="true" />
+      <span className="page__gutter-shadow" aria-hidden="true" />
+      <div className="page__texture" aria-hidden="true" />
       <div className="page__inner">
         {spell ? (
           <>
