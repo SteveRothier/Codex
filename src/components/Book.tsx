@@ -1,6 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Page from './Page'
 import { spells } from '../data/spells'
+
+function isTypingTarget(target: EventTarget | null) {
+  if (!(target instanceof HTMLElement)) return false
+  const tag = target.tagName
+  if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return true
+  return target.isContentEditable
+}
 
 function spreadSpellAt(index: number) {
   return spells[index] ?? null
@@ -22,6 +29,24 @@ export default function Book() {
   const prevPage = () => {
     if (spreadIndex > 0) setSpreadIndex((i) => i - 1)
   }
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
+      if (isTypingTarget(e.target)) return
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        setSpreadIndex((i) => (i > 0 ? i - 1 : i))
+      } else {
+        e.preventDefault()
+        setSpreadIndex((i) => (i < maxSpread ? i + 1 : i))
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [maxSpread])
 
   return (
     <div className="book">
