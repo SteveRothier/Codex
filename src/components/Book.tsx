@@ -51,9 +51,9 @@ export default function Book() {
   return (
     <div className="book">
       <div className="book__spread" role="region" aria-label="Grimoire ouvert">
-        <Page side="left" spell={leftSpell} />
+        <Page side="left" spell={leftSpell} spreadKey={spreadIndex} />
         <div className="book__spine" aria-hidden="true" />
-        <Page side="right" spell={rightSpell} />
+        <Page side="right" spell={rightSpell} spreadKey={spreadIndex} />
       </div>
       <div className="controls">
         <button
