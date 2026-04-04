@@ -1,9 +1,32 @@
 import { forwardRef } from 'react'
-import type { SpellEntry } from '../data/spells'
+import type { WeaponSpell } from '../data/weaponSpells'
 
 export type PageProps = {
   side: 'left' | 'right'
-  spell: SpellEntry | null
+  spell: WeaponSpell | null
+}
+
+function SpellIcon({ icon, label }: { icon: string; label: string }) {
+  const isUrl = /^https?:\/\//i.test(icon)
+  if (isUrl) {
+    return (
+      <span className="page__icon page__icon--img" aria-hidden="true">
+        <img
+          src={icon}
+          alt=""
+          className="page__icon-img"
+          loading="lazy"
+          decoding="async"
+          referrerPolicy="no-referrer"
+        />
+      </span>
+    )
+  }
+  return (
+    <span className="page__icon" aria-hidden="true" title={label}>
+      {icon}
+    </span>
+  )
 }
 
 const Page = forwardRef<HTMLDivElement, PageProps>(function Page(
@@ -22,9 +45,48 @@ const Page = forwardRef<HTMLDivElement, PageProps>(function Page(
       <div className="page__inner">
         {spell ? (
           <>
-            <h2 className="page__title">{spell.name}</h2>
+            <header className="page__header">
+              <SpellIcon icon={spell.icon} label={spell.spellName} />
+              <div className="page__headlines">
+                <p className="page__type">{spell.weaponType}</p>
+                <h2 className="page__title">{spell.spellName}</h2>
+                <p className="page__weapon">{spell.weaponName}</p>
+              </div>
+            </header>
             <p className="page__desc">{spell.description}</p>
-            <small className="page__level">{spell.level}</small>
+            <dl className="page__stats">
+              <div className="page__stat">
+                <dt>Énergie</dt>
+                <dd>{spell.energyCost}</dd>
+              </div>
+              <div className="page__stat">
+                <dt>Incantation</dt>
+                <dd>
+                  {spell.castTimeLabel.toLowerCase() === 'instant' ||
+                  spell.castTimeS === 0
+                    ? spell.castTimeLabel
+                    : `${spell.castTimeS}s`}
+                </dd>
+              </div>
+              <div className="page__stat">
+                <dt>Portée</dt>
+                <dd>
+                  {spell.rangeLabel.toLowerCase() === 'self'
+                    ? 'Soi'
+                    : spell.rangeLabel.includes('/')
+                      ? spell.rangeLabel
+                      : `${spell.rangeM} m`}
+                </dd>
+              </div>
+              <div className="page__stat">
+                <dt>Recharge</dt>
+                <dd>
+                  {typeof spell.cooldownS === 'number'
+                    ? `${spell.cooldownS}s`
+                    : spell.cooldownS}
+                </dd>
+              </div>
+            </dl>
           </>
         ) : (
           <div className="page__empty" aria-hidden="true">

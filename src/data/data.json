@@ -1,0 +1,2364 @@
+{
+  "entries": [
+    {
+      "weapon": {
+        "name": "Battleaxe",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "name": "Blood Bandit",
+        "icon": "https://render.albiononline.com/v1/spell/Blood Bandit.png?size=217&locale=en",
+        "description": "Combine up to two abilities. The combo resets after 10s.\n1st Blood Draw\nThrow an axe in the targeted direction, dealing physical damage to all enemies hit, based on the number of Rending Bleed Charge on them.\n2nd Blood Bandit:\nThrow an axe infused with blood magic in the targeted direction, dealing 363 physical damage\nHeals you based on the number of Rending Bleed Charges on the first enemy hit.\n\nRending Bleed Charges: 0 | 1 | 2 | 3\nDamage: 578 | 660 | 743 | 825\nLifesteal: 743 | 743 | 743 | 743",
+        "energyCost": 38,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 17,
+        "rangeLabel": "17m",
+        "cooldownS": 10
+      }
+    },
+    {
+      "weapon": {
+        "name": "Greataxe",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "name": "Whirlwind",
+        "icon": "https://render.albiononline.com/v1/spell/Whirlwind.png?size=217&locale=en",
+        "description": "Spin around like a whirlwind, swinging your axe and dealing 203 physical damage every 0.5s in a 5m radius while channeling for 2.5s(can't be interrupted and can move while channeling).\nEach consecutive hit on the same enemy increases the damage by 15\nEach 0.5s spent channeling cost 10 Energy.",
+        "energyCost": 0,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 5,
+        "rangeLabel": "5m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Halberd",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "name": "Tear Apart",
+        "icon": "https://render.albiononline.com/v1/spell/Tear Apart.png?size=217&locale=en",
+        "description": "Cleave through all enemies in a 7m radius around you, dealing 453 physical damage. If any enemy hit has Rending Bleed Charges, all enemies hit receive the same number of charges as the enemy with the most charges.\nEach Rending Bleed Charge deals 91 physical damage over 6s (stacks up to 3 times). \nIf the maximum amount of stacks is reached, the affected enemies' Healing Received is reduced by 12% for 5s.",
+        "energyCost": 63,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 7,
+        "rangeLabel": "7m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Infernal Scythe",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "name": "Bloody Reap",
+        "icon": "https://render.albiononline.com/v1/spell/Bloody Reap.png?size=217&locale=en",
+        "description": "Reap all enemies in a 5m around' you after 1s, dealing 392 physical damage. Follow up with a second swing after 0.5s, dealing physical damage based on their current Health.\nTarget Health: Above 40%|Below 40%\nDamage: 457|870",
+        "energyCost": 63,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 5,
+        "rangeLabel": "5m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Bear Paws",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "name": "Razor Cut",
+        "icon": "https://render.albiononline.com/v1/spell/Razor Cut.png?size=217&locale=en",
+        "description": "Leap in the targeted direction, dealing 508 physical damage in a cone in front of you on impact. Causes all enemies hit to bleed, dealing 180 true damage over 6s.\nHitting at least one enemy player will reduce the cooldown of this ability by 40%.",
+        "energyCost": 70,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Realmbreaker",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "name": "Aftershock",
+        "icon": "https://render.albiononline.com/v1/spell/Aftershock.png?size=217&locale=en",
+        "description": "Leap towards the targeted position and slam your axe into the ground dealing 769 physical damage to all enemies in a 4m radius.\nSplits the earth in a cone in front of the impact area, throwing all enemies hit in the air for 0.6s. Decreases Max and current Health by 20% for 5s.",
+        "energyCost": 56,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 10,
+        "rangeLabel": "10m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Broadsword",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "name": "Mighty Blow",
+        "icon": "https://render.albiononline.com/v1/spell/Mighty Blow.png?size=217&locale=en",
+        "description": "Leap towards the targeted enemy,\ninterrupting their spell casting. \nDeals physical damage based on the amount of Heroic Charges on you.\n\nHeroic Charges: 0 | 1 | 2 | 3\nDamage: 264 | 422 | 634 | 894\nConsumes all your Heroic Charges.",
+        "energyCost": 43,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 10,
+        "rangeLabel": "10m",
+        "cooldownS": 12
+      }
+    },
+    {
+      "weapon": {
+        "name": "Claymore",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "name": "Charge",
+        "icon": "https://render.albiononline.com/v1/spell/Charge.png?size=217&locale=en",
+        "description": "Charge towards the targeted enemy, becoming immune to all Crowd Control effects, Debuffs, and damage for 1s.\nEnemies who are not mounted will be stunned for 0.8s on impact (ignoring crowd control resistance). \nDeals physical damage to the targeted enemy based on the amount of Heroic Charges on you.\n\nHeroic Charges: 0 | 1 | 2 | 3\nDamage: 294 | 471 | 707 | 1001\nConsumes all your Heroic Charges.",
+        "energyCost": 64,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s (uninterruptible)",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Dual Swords",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "name": "Spinning Blades",
+        "icon": "https://render.albiononline.com/v1/spell/Spinning Blades.png?size=217&locale=en",
+        "description": "Leap Towards the targeted position, becoming Immune to all Crowd Control effects until impact.\nThrows enemies into the air for 0.6s\nDeals 232 physical damage in a 5m radius on impact\nHitting at least one enemy will increase your Attack Speed and physical normal attack damage by 50% for 3s",
+        "energyCost": 60,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 13,
+        "rangeLabel": "13m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Clarent Blade",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "name": "Crescent Slash",
+        "icon": "https://render.albiononline.com/v1/spell/Crescent Slash.png?size=217&locale=en",
+        "description": "Slice the air to shoot a demonic wave in the targeted direction, piercing through all enemies and dealing 660 magical damage.\nConsumes Heroic Charges for one of the following secondary effects.\n\n1 Heroic Charge: Slows by 30% for 3.53s\n2 Heroic Charges: Silences for 3.53s\n3 Heroic Charger: Deals additional 471 magical damage",
+        "energyCost": 51,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 21,
+        "rangeLabel": "21m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Carving Sword",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "name": "Fearless Strike",
+        "icon": "https://render.albiononline.com/v1/spell/Fearless Strike.png?size=217&locale=en",
+        "description": "Dash towards the targeted position, dealing 544 physical damage to all enemies you pass trough.\nDecreases their damage resistances for 6s based on the amount of Heroic Charges on you.\n\nHeroic Charges: 0 | 1 | 2 | 3\nResistance Reduction: 21 | 34 | 52 | 73\nConsumes all your Heroic Charges.",
+        "energyCost": 67,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Galatine Pair",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "name": "Soulless Stream",
+        "icon": "https://render.albiononline.com/v1/spell/Soulless Stream.png?size=217&locale=en",
+        "description": "Slam your blades into the ground, unleashing magic waves in a 8.5m radius.\nDecreases max and current Health of all enemies hit by 6% for 7s. \nDeals magical damage based on the amount of Heroic Charges on you.\n\nHeroic Charges: 0 | 1 | 2 | 3\nDamage: 305 | 486 | 729 | 1033\nConsumes all your Heroic Charges.",
+        "energyCost": 94,
+        "castTimeS": 1.1,
+        "castTimeLabel": "1.1s (uninterruptible)",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "0",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Kingmaker",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "name": "Majestic Smash",
+        "icon": "https://render.albiononline.com/v1/spell/Majestic Smash.png?size=217&locale=en",
+        "description": "Swing your sword in a 6m radius around you, throwing all enemies hit in the air for 0.83s.\nDeals 160 physical damage.\nWhile the enemies are in the air you follow up with a vertical smash, dealing physical damage in a line in front of and behind you based on the amount of Heroic Charges on you.\n\nHeroic Charges: 0 | 1 | 2 | 3\nDamage: 315 | 508 | 762 | 1077\nConsumes all your Heroic Charges.",
+        "energyCost": 67,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 6,
+        "rangeLabel": "6m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Mace",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "name": "Deep Leap",
+        "icon": "https://render.albiononline.com/v1/spell/Deep Leap.png?size=217&locale=en",
+        "description": "Leap towards the targeted position, becoming immune to all Crowd Control effects, Debuffs, and damage until impact.\nDeals 448 physical  in a 5m radius on impact. \nSlows all enemies hit by 30% for 4.19s. Enemies within a 3m radius will be stunned for 2.52s.",
+        "energyCost": 45,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Heavy Mace",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "name": "Battle Howl",
+        "icon": "https://render.albiononline.com/v1/spell/Battle Howl.png?size=217&locale=en",
+        "description": "Summon a magic circle with a 6m radius, silencing all enemies hit for 3.58s and Purging all buffs from them.\nIncreases your threat towards all mobs hit by 156.",
+        "energyCost": 37,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 6,
+        "rangeLabel": "6m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Morning Star",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "name": "Gravitas",
+        "icon": "https://render.albiononline.com/v1/spell/Gravitas.png?locale=en",
+        "description": "Create a magical field with a 5m radius around you, rooting all enemies (ignoring crowd control resistance), while channeling for 2.5s (can't be interrupted). Increases your threat towards any rooted mob by 80 every 0.5s. At the end of the channel, enemies will remain rooted for 2s.",
+        "energyCost": 43,
+        "castTimeS": 0.5,
+        "castTimeLabel": "0.5s",
+        "isChanneled": false,
+        "rangeM": 5,
+        "rangeLabel": "5m",
+        "cooldownS": 28.2
+      }
+    },
+    {
+      "weapon": {
+        "name": "Bedrock Mace",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "name": "Force of Nature",
+        "icon": "https://render.albiononline.com/v1/spell/Force of Nature.png?size=217&locale=en",
+        "description": "Split the earth in a 18m long line in front of you, releasing air jets that last for 4s.\nKnocks back any enemy touching the air jets by 18m. \nMakes you the highest priority target to any mob hit.\nIncreases your Threat by 200 towards any mob within a 5m radius around you.",
+        "energyCost": 28,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 18.5,
+        "rangeLabel": "18.5m",
+        "cooldownS": 22.2
+      }
+    },
+    {
+      "weapon": {
+        "name": "Incubus Mace",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "name": "Shrinking Curse",
+        "icon": "https://render.albiononline.com/v1/spell/Shrinking Curse.png?size=217&locale=en",
+        "description": "Shrink all enemies in a cone in front of you, decreasing their max and current Health by 25% of their damage dealt and Healing Cast by 40% for 8s.",
+        "energyCost": 61,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 10,
+        "rangeLabel": "10m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Camlann Mace",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "name": "Vendetta",
+        "icon": "https://render.albiononline.com/v1/spell/Vendetta.png?size=217&locale=en",
+        "description": "Shoot a shockwave in the targeted direction, cursing the first enemy hit.\nPulls all enemies in a 8m radius toward the cursed enemy after 1.5s. \nStuns for 1.23s. \nDeals 196 magical damage.",
+        "energyCost": 52,
+        "castTimeS": 0.7,
+        "castTimeLabel": "0.7s",
+        "isChanneled": false,
+        "rangeM": 18,
+        "rangeLabel": "18m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Oathkeepers",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "name": "Blessed Aurora",
+        "icon": "https://render.albiononline.com/v1/spell/Blessed Aurora.png?size=217&locale=en",
+        "description": "Conjure a 18m wide blessed aurora lasting 3s. I\nncreases Move Speed for up to 20 allies passing through the aurora by 30% for 5s. \nApplies a shield that absorbs up to 1324 damage (before resistances) while Move Speed is increased.\nBless your maces, restoring 64 Health for you and up to 5 allies in a 6m radius around you with every normal attack within the next 5s.",
+        "energyCost": 70,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 2,
+        "rangeLabel": "2m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Great Hammer",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "name": "Tackle",
+        "icon": "https://render.albiononline.com/v1/spell/Tackle.png?size=217&locale=en",
+        "description": "Dash toward the targeted position, knocking back all enemies you pass through by 3.07 and stunning them for 3.61s.\nDeals 230 physical damage.",
+        "energyCost": 49,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Polehammer",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "name": "Groundbreaker",
+        "icon": "https://render.albiononline.com/v1/spell/Groundbreaker.png?size=217&locale=en",
+        "description": "Split the earth in a 15m long line in front of you, dealing 245 physical damage to all enemies hit.\nEnemies at the center of the split earth will be stunned for 3.84s.",
+        "energyCost": 49,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Tombhammer",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "name": "Grasp of the Undead",
+        "icon": "https://render.albiononline.com/v1/spell/Grasp of the Undead.png?size=217&locale=en",
+        "description": "Summon a giant undead hand at the targeted position, stunning all enemies within a 2.5m radius for 3.81s after 0.35s.\nDeals 315 physical damage.",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 14
+      }
+    },
+    {
+      "weapon": {
+        "name": "Forge Hammers",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "name": "Giant Steps",
+        "icon": "https://render.albiononline.com/v1/spell/Giant Steps.png?size=217&locale=en",
+        "description": "Grow to giant size, increasing your Armor by 59, your Magic Resistance by 103 and your Attack Range by 50% for 10s.\nCreate an aura with a 7m radius around you, Slowing all enemies in it by 20%\nWhile the ability is active, you can cast Giant Smash multiple times by recasting the ability.\nGiant Smash:Slam your hammers on the ground, dealing 347 physical damage to all enemies in a 4m radius around the targeted position.\nThrows all enemies hit into the air for 0.6s.",
+        "energyCost": 63,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "Self",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Grovekeeper",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "name": "Ground Pound",
+        "icon": "https://render.albiononline.com/v1/spell/Ground Pound.png?size=217&locale=en",
+        "description": "Leap towards the targeted position, becoming immune to all Crowd Control effects and damage until impact. Stuns all enemies in a 5.5m radius for 3.84s.\nDeals 310 physical damage. \nIncreases your damage resistances by 74 for each enemy hit (stacks up to 3 times) for 6s.",
+        "energyCost": 70,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s",
+        "isChanneled": false,
+        "rangeM": 14,
+        "rangeLabel": "14m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Crossbow",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "name": "Snipe Shot",
+        "icon": "https://render.albiononline.com/v1/spell/Snipe Shot.png?size=217&locale=en",
+        "description": "Deals 1273 Physical Damage to a single target.",
+        "energyCost": 49,
+        "castTimeS": 2.5,
+        "castTimeLabel": "2.5s",
+        "isChanneled": false,
+        "rangeM": 16,
+        "rangeLabel": "16m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Light Crossbow",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "name": "Exploding Shot",
+        "icon": "https://render.albiononline.com/v1/spell/Exploding Shot.png?size=217&locale=en",
+        "description": "Fires an exploding shot that deals 146 Physical Damage and places a bomb on the target. After a few seconds, the bomb will explode dealing 517 damage to any enemy in a 5m radius around the detonation. This damage cannot be reflected.",
+        "energyCost": 43,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Heavy Crossbow",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "name": "Sweeping Bolt",
+        "icon": "https://render.albiononline.com/v1/spell/Sweeping Bolt.png?size=217&locale=en",
+        "description": "A strong bolt that sweeps through the enemy dealing 585 damage to every enemy it hits. It also interrupts enemy spell casting and channeling.",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 22,
+        "rangeLabel": "22m",
+        "cooldownS": 18
+      }
+    },
+    {
+      "weapon": {
+        "name": "Weeping Repeater",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "name": "Explosive Mine",
+        "icon": "https://render.albiononline.com/v1/spell/Explosive Mine.png?size=217&locale=en",
+        "description": "Shoot a mine into the ground, which becomes active after 2s. Once someone (ally or enemy) steps onto it, it detonates and deals 822 Magical Damage to all enemies within a 7m radius. This damage cannot be reflected.",
+        "energyCost": 43,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Boltcasters",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "name": "Deathward Climax",
+        "icon": "https://render.albiononline.com/v1/spell/Deathward Climax.png?size=217&locale=en",
+        "description": "A channeled spell dealing 27 Physical Damage for up to 12 hits. The damage is multiplied each hit and stacks up to 12 times. The last shot always hits twice.",
+        "energyCost": 30,
+        "castTimeS": 0,
+        "castTimeLabel": "channeled",
+        "isChanneled": true,
+        "rangeM": 13,
+        "rangeLabel": "13m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Siegebow",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "name": "Vicious Barrage",
+        "icon": "https://render.albiononline.com/v1/spell/Vicious Barrage.png?size=217&locale=en",
+        "description": "Fires a sustained barrage of bolts in a large cone in front of the caster dealing 296 Magical Damage per second. Against players, an additional 2% of the enemy's max health will be dealt as true damage each second. The channel lasts up to 5 seconds.",
+        "energyCost": 64,
+        "castTimeS": 0,
+        "castTimeLabel": "channeled",
+        "isChanneled": true,
+        "rangeM": 20,
+        "rangeLabel": "20m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Energy Shaper",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "name": "Divine Engine",
+        "icon": "https://render.albiononline.com/v1/spell/Divine Engine.png?size=217&locale=en",
+        "description": "Unleash a 26m long beam of Avalonian energy in the targeted direction, piercing through all enemies while channeling for 4s (cant be interrupted).\nDeals 244 magical damage (vs players) / 79 magical damage (vs mobs) every 0.3s.\nThe beam slowly follows the cursor position.",
+        "energyCost": 0,
+        "castTimeS": 1,
+        "castTimeLabel": "1s",
+        "isChanneled": false,
+        "rangeM": 26,
+        "rangeLabel": "26m",
+        "cooldownS": 40
+      }
+    },
+    {
+      "weapon": {
+        "name": "Battle Bracers",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "name": "Falcon Smash",
+        "icon": "https://render.albiononline.com/v1/spell/Falcon Smash.png?size=217&locale=en",
+        "description": "Float into the air and become immune to all Crowd Control effects for up to 2 seconds.\nRecast the ability to dive towards the targeted position.\nDeals physical damage within a 6 radius upon impact based on the distance of the enemy from the targeted position.\n\nDistance: 4m - 6m\nDamage: 957 - 602",
+        "energyCost": 54,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Spiked Gauntlets",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "name": "Gravitational Collapse",
+        "icon": "https://render.albiononline.com/v1/spell/Gravitational Collapse.png?size=217&locale=en",
+        "description": "Unleash a powerful punch in a cone in front of you, dealing magical damage and slowing all enemies hit for 7.07 seconds based on the type of armor the enemy wears.\nArmor: Plate or Mobs | Leather | other\nDamage: 1378 | 870 | 508\nSlow: 75% | 50% | 25%",
+        "energyCost": 73,
+        "castTimeS": 0.6,
+        "castTimeLabel": "0.6s",
+        "isChanneled": false,
+        "rangeM": 13,
+        "rangeLabel": "13m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Brawler Gloves",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "name": "Blazing Geyser",
+        "icon": "https://render.albiononline.com/v1/spell/Blazing Geyser.png?size=217&locale=en",
+        "description": "Hit the ground, releasing a Blazing Geyser with a 3m radius in front of you.\nDeals  682 magical damage.\nThrows all enemies hit in the air for 0.5.\nHitting at least one enemy will reset the cooldown of your first-slot ability.",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 3,
+        "rangeLabel": "3m",
+        "cooldownS": 18
+      }
+    },
+    {
+      "weapon": {
+        "name": "Ursine Maulers",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "name": "Hundred Striking Fists",
+        "icon": "https://render.albiononline.com/v1/spell/Hundred Striking Fists.png?size=217&locale=en",
+        "description": "Release a flurry of fists in a cone in front of you while channeling for up to 2.5s (can't be interrupted).\nDeals 131 physical damage (vs players) / 87 physical damage (vs mobs) every 0.5 seconds. \nThe cone slowly follows the cursor position. \n2s after the last Striking Fist' hits, the enemy will take and additional 109 magical damage for each hit they have received. (Stacks up to 10 times).",
+        "energyCost": 65,
+        "castTimeS": 0.5,
+        "castTimeLabel": "0.5s",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Hellfire Hands",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "name": "Infernal Boulder",
+        "icon": "https://render.albiononline.com/v1/spell/Infernal Boulder.png?size=217&locale=en",
+        "description": "Throw a boulder towards the targeted area, which bounces three times as it rolls.\nEach impact deals 508 magical damage to all enemies within a 4m radius.\nAlso sets them on fire, dealing 152 magical damage over 3s and\nreducing Healing Received by -20%. (Stacks up to 3 times.)",
+        "energyCost": 65,
+        "castTimeS": 0.92,
+        "castTimeLabel": "0.92s",
+        "isChanneled": false,
+        "rangeM": 10,
+        "rangeLabel": "10m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Ravenstrike Cestus",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "name": "Earth Crusher",
+        "icon": "https://render.albiononline.com/v1/spell/Earth Crusher.png?size=217&locale=en",
+        "description": "Charge up the Earth Crusher, slowing yourself by 50% while channeling for up to 2s (can't be interrupted).\nDeals magical damage to all enemies in an area around you.\nThe damage and radius is based on how long you have channeled (you may end the channel early).\n\nCharge Up Time: 0.5s | 1s | 1.5s | 2s\nDamage: 580 | 616 | 653 | 689\nRadius: 5m | 7m | 8m | 9m\nChanneling for the full duration will throw all enemies hit in the air for 1s.",
+        "energyCost": 83,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "0m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Fists of Avalon",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "name": "Purifying Combination",
+        "icon": "https://render.albiononline.com/v1/spell/Purifying Combination.png?size=217&locale=en",
+        "description": "Combine up to two abilities. The combo resets after 5.\n1st Dive Kick: \nLeap towards the targeted position, becoming immune to all Crowd Control effects until impact. \nThrows enemies in the air for 1s.\nDeals 156 physical damage.\n2nd Purifying Fist: \nPunch the area in front of you, dealing 852 physical damage.\nPurges all buffs from all enemies hit (except for healing over time effects).",
+        "energyCost": 25,
+        "castTimeS": 0,
+        "castTimeLabel": "0s - 0.6s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m - 10m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Bow",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "name": "Enchanted Quiver",
+        "icon": "https://render.albiononline.com/v1/spell/Enchanted Quiver.png?size=217&locale=en",
+        "description": "Enchant up to 6 of your arrows for the next 8s.\nWhile you hold enchanted arrows, your attack speed is increased by 50% and your physical attack damage by 240%.\nEach normal attack consumes 1 enchanted arrow.\nRecast the ability within 8s to dash to targeted position and enchant 4 more arrows (cannot exceed 6 arrows).",
+        "energyCost": 60,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "self",
+        "cooldownS": 12
+      }
+    },
+    {
+      "weapon": {
+        "name": "Warbow",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "name": "Magic Arrow",
+        "icon": "https://render.albiononline.com/v1/spell/Magic Arrow.png?size=217&locale=en",
+        "description": "Shoot an arrow in the targeted direction, dealing magical damage upon impact with an enemy based on the time the arrow has been flying.\nTime passed: 0s | 1.5s\nDamage (vs. players): 492 | 666\nDamage (vs. mobs): 580 | 810",
+        "energyCost": 35,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 26,
+        "rangeLabel": "26m",
+        "cooldownS": 10
+      }
+    },
+    {
+      "weapon": {
+        "name": "Longbow",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "name": "Rain of Arrows",
+        "icon": "https://render.albiononline.com/v1/spell/Rain of Arrows.png?size=217&locale=en",
+        "description": "Fire volleys of arrows in the air every 0.5s, each landing at the targeted position after 0.5s, while channeling for 1.5s. Each volley deals 284 physical damage to all enemies within a 5m radius. Slows by 20% for 3.07s.",
+        "energyCost": 54,
+        "castTimeS": 0,
+        "castTimeLabel": "channeled",
+        "isChanneled": true,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Whispering Bow",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "name": "Undead Arrows",
+        "icon": "https://render.albiononline.com/v1/spell/Undead Arrows.png?size=217&locale=en",
+        "description": "Call upon the lost souls around you, increasing your Attack Range by 35% and Attack Speed by 20%. Deals an extra 158 magical damage on every normal attack.\nDecreases your Defense by 20%.\nThe ability can last for up to 8s but can be deactivated earlier.",
+        "energyCost": 44,
+        "castTimeS": 0,
+        "castTimeLabel": "Toggle",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "0",
+        "cooldownS": 12
+      }
+    },
+    {
+      "weapon": {
+        "name": "Wailing Bow",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "name": "Demon Arrow",
+        "icon": "https://render.albiononline.com/v1/spell/Demon Arrow.png?size=217&locale=en",
+        "description": "Shoot an arrow infused with demonic power in the targeted direction, piercing though all enemies. Deals physical damage to all enemies hit based on the amount of enemies the arrow has already hit(the damage can't be reflected).\nEnemies hit: 1st | 2nd | 3rd | 4th or more\nDamage: 597 | 724 | 852 | 980",
+        "energyCost": 57,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 24,
+        "rangeLabel": "24m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Bow of Badon",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "name": "Raging Storm",
+        "icon": "https://render.albiononline.com/v1/spell/Raging Storm.png?size=217&locale=en",
+        "description": "Shoot a storm-infused arrow in the targeted diercton, which explodes into a 5m radius stormcloud lasting 4.8s upon impact with an enemy. Deals 76 magical damage every 0.3s.\nEnemies leaving the area will continue to take 534 magical damage over 1.8s(this also happens after the cloud disappears). \nWhenever the ability deals damage, it will interrupt the hit enemy's spell casting.",
+        "energyCost": 60,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 26,
+        "rangeLabel": "26m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Mistpiercer",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "name": "Lucent Hawk",
+        "icon": "https://render.albiononline.com/v1/spell/Lucent Hawk.png?size=217&locale=en",
+        "description": "Release a Lucent Hawk in the targeted direction, piercing through all enemies and dealing 505 magical damage to each enemy hit.\nThe ability can be recast again within 3s up to 4 times.",
+        "energyCost": 19,
+        "castTimeS": 0.6,
+        "castTimeLabel": "0.6s",
+        "isChanneled": false,
+        "rangeM": 24,
+        "rangeLabel": "24m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Spear",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "name": "Reckless Charge",
+        "icon": "https://render.albiononline.com/v1/spell/Reckless Charge.png?size=217&locale=en",
+        "description": "Dash towards the targeted position, throwing all enemies you pass through into the air for 0.6s.\nDeals physical damage based on the amount of Spirit Spear Charges on you\n\nSpirit Spear Charges: 0 | 1 | 2 | 3\nDamage: 201 | 323 | 485 | 687",
+        "energyCost": 59,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 13,
+        "rangeLabel": "13m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Glaive",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "name": "Fling",
+        "icon": "https://render.albiononline.com/v1/spell/Fling.png?size=217&locale=en",
+        "description": "Fling the targeted enemy, pulling them 7m behind you.\nDeals physical damage based on the amount of Spirit Spear Charges on you\n\nSpirit Spear Charges: 0 | 1 | 2 | 3\nDamage: 185 | 295 | 443 | 627",
+        "energyCost": 54,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 3,
+        "rangeLabel": "3m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Pike",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "name": "Rooting Smash",
+        "icon": "https://render.albiononline.com/v1/spell/Rooting Smash.png?size=217&locale=en",
+        "description": "Swing your pike at the targeted enemy, rooting them for\n4.93s.\nDeals physical damage based on the amount of Spirit Spear Charges on you\n\nSpirit Spear Charges: 0 | 1 | 2 | 3\nDamage: 252 | 402 | 604 | 855",
+        "energyCost": 51,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 5.5,
+        "rangeLabel": "5.5m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Heron Spear",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "name": "Spear Throw",
+        "icon": "https://render.albiononline.com/v1/spell/Spear Throw.png?size=217&locale=en",
+        "description": "Throw your spear in the targeted direction, releasing an electric shock in a 4m radius on impact with an enemy.\nDeals 614 magical damage to all enemies shocked\nStuns for 2.81s.",
+        "energyCost": 59,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 22,
+        "rangeLabel": "22m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Spirithunter",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "name": "Corrupting Steel",
+        "icon": "https://render.albiononline.com/v1/spell/Corrupting Steel.png?size=217&locale=en",
+        "description": "Hurl your spear in the targeted direction, piercing through all enemies. Deals 290 physical damage. Decreases damage resistances of all enemies hit by 37 for 4s.\nThe spear leaves behind a trail of corruption that lasts 4.2s. Deals 116 magical damage every 0.5s to all enemies standing on the path.",
+        "energyCost": 73,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 24,
+        "rangeLabel": "24m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Trinity Spear",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "name": "Spectral Trident",
+        "icon": "https://render.albiononline.com/v1/spell/Spectral Trident.png?size=217&locale=en",
+        "description": "Leap towards the targeted position, becoming immune to all Crowd Control effects, debuffs(except damage over time effects), and damage until impact. Roots all enemies in a 3m radius on impact for 4.68s. Deals 695 physical damage.\nConjures a mist of souls in a 8m radius around the impact location, lasting 6s. Increases Move Speed by 50% and Attack Speed by 100%, and reduces Cast Times by 30% for up to 10 allies within in.",
+        "energyCost": 76,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Daybreaker",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "name": "Breakthrough",
+        "icon": "https://render.albiononline.com/v1/spell/Breakthrough.png?size=217&locale=en",
+        "description": "Dash towards the targeted position, becoming immune to all Crowd Control effects until you reach the targeted position. Purges all buffs from all the enemies you pass through. Deals 700 physical damage.",
+        "energyCost": 63,
+        "castTimeS": 0.35,
+        "castTimeLabel": "0.35s",
+        "isChanneled": false,
+        "rangeM": 16,
+        "rangeLabel": "16m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Nature Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "name": "Circle of Life",
+        "icon": "https://render.albiononline.com/v1/spell/Circle of Life.png?size=217&locale=en",
+        "description": "Mend the wounds of up to  5  allies within a  11m radius , healing them  based  on the  amount  of  Rejuvenation Charges  on the  ally .\nRejuvenation Charges:  0  |  1  |  2  |  3 \nHealing:  175  |  217  |  282  |  370 \nIf you have  3  or more  Thorn Charges  active on you, you will root all enemies within the  heal radius  for 2.32s.\nDeals  234 magical damage .",
+        "energyCost": 42,
+        "castTimeS": 1,
+        "castTimeLabel": "1s",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "Self",
+        "cooldownS": 18
+      }
+    },
+    {
+      "weapon": {
+        "name": "Wild Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "name": "Well of Life",
+        "icon": "https://render.albiononline.com/v1/spell/Well of Life.png?size=217&locale=en",
+        "description": "Create a Well of Life with  7m radius  at the targeted position, lasting  6s .\nHeals up to  10  allies within the Well for  78 Health  every  1s .",
+        "energyCost": 61,
+        "castTimeS": 1,
+        "castTimeLabel": "1s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Great Nature Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "name": "Living Armor",
+        "icon": "https://render.albiononline.com/v1/spell/Living Armor.png?size=217&locale=en",
+        "description": "Protect the targeted ally with Living Armor, increasing their  damage resistances  by  37   for  4s . Whenever the  target receives damage  , they will restore  ? Health .",
+        "energyCost": 49,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Druidic Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "name": "Spiritual Seed",
+        "icon": "https://render.albiononline.com/v1/spell/Spiritual Seed.png?size=217&locale=en",
+        "description": "Plant a Spiritual Seed in the targeted ally, healing the target for  411 Health  after  3s .\nThe spell can be  recast  again within  2.5s , but stacking it twice on the same target will override the first cast.",
+        "energyCost": 24,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Blight Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "name": "Elevated Nature",
+        "icon": "https://render.albiononline.com/v1/spell/Elevated%20Nature.png?locale=en",
+        "description": "Conjure an aura with  9m radius , increasing your  Move Speed  by  15%  while  channeling  for up to  5.6s  (can't be interrupted).\nRestores  63 Health  (when used alone) /  73 Health  (when healing at least one ally) every  0.8s for up to  10  allies.",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "moving channel",
+        "isChanneled": true,
+        "rangeM": 0,
+        "rangeLabel": "0m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Rampant Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "name": "Spirit Animal",
+        "icon": "https://render.albiononline.com/v1/spell/Spirit Animal.png?size=217&locale=en",
+        "description": "Release a Spirit Animal from the targeted position in the targeted direction that heals any ally touching it by  195 , creating a  25m long  trail that lasts for  9m .\nHeals up to  15  allies standing on the trail every  1s  for  24 Health .\nFor  each ally  standing on the trail, the healing is increased by  30% .",
+        "energyCost": 55,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 25,
+        "rangeLabel": "25m",
+        "cooldownS": 45
+      }
+    },
+    {
+      "weapon": {
+        "name": "Ironroot Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "name": "Soul Link",
+        "icon": "https://render.albiononline.com/v1/spell/Soul Link.png?size=217&locale=en",
+        "description": "Bind the souls of  two targets  together, linking them for  7s .\nIf  2 allies  are linked:  Transfers  50%  of the  damage taken  by one target to the other target. Transfers  100%  of the  Healing Received  by one target to the other target.\nIf an  ally  and an  enemy  are linked:  Transfers  30%  of the  Healing Received  by the enemy to the ally. Transfers  10%  of the  damage the ally takes  to the enemy. \nIf  2 enemies  are linked:  Deals  50%  of the  damage one target takes  (after damage resistances) to the other enemy as  true damage .",
+        "energyCost": 18,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Dagger",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "name": "Bloodthirsty Blade",
+        "icon": "https://render.albiononline.com/v1/spell/Bloodthirsty Blade.png?size=217&locale=en",
+        "description": "Give in to your Bloodthirsty Blade, dealing an additional 167 magical damage  (vs. players) / 100 magical damage  (vs. mobs) with each normal attack. Steals 100% of the Health the enemy has  lost  through the  bonus damage . Increases your Move Speed by 30%.\nDeals 4% of your Max Health as true damage to yourself every 1s. The ability lasts up to  6s  but can be deactivated earlier.",
+        "energyCost": 47,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "self",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Dagger Pair",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "name": "Slit Throat",
+        "icon": "https://render.albiononline.com/v1/spell/Slit Throat.png?size=217&locale=en",
+        "description": "Land a devastating blow on the targeted enemy, dealing  physical damage   based  on the  amount  of  Assassin Spirit Charges  on you or  Sunder Armor Charges  on the enemy. Inflicts a bleed dealing  physical damage   based  on the  amount  of  Assassin Spirit Charges  on you or  Sunder Armor Charges  on the enemy over  4s . Reduces  Healing Received  by  20%  for  4s .\nCharges:  0  |  1  |  2  |  3 \nDirect Damage:  336  |  530  |  797  |  1130 \nBleed Damage:  111  |  177  |  266  |  377 \n\nConsumes all Assassin Spirit and Sunder Armor Charges on you and the target.",
+        "energyCost": 40,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s",
+        "isChanneled": false,
+        "rangeM": 2,
+        "rangeLabel": "2m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Bloodletter",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "name": "Lunging Stabs",
+        "icon": "https://render.albiononline.com/v1/spell/Lunging Stabs.png?size=217&locale=en",
+        "description": "Dash  towards the targeted position, dealing  physical damage  to all enemies you pass through  based  on their  current Health .\n\nTarget Health:  Above 40%  |  Below 40% \nDamage:  490  |  1056 \n\nHitting at least one enemy  player  below  40% Health  increases your  Cooldown Rate  by  90%  for  1s  .",
+        "energyCost": 54,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Demonfang",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "name": "Blood Ritual",
+        "icon": "https://render.albiononline.com/v1/spell/Blood Ritual.png?size=217&locale=en",
+        "description": "Infuse your blade with blood magic and swing it in a  cone in front  of you, dealing 354 magical damage immediately and another  153 magical damage over  1.4s  to all enemies hit. (Does not stack).\nDeals  110 physical damage  over  3.5s  to yourself (  stacks  up to  3  times).\nThe ability can be  cast  again within  3s  for up to  3  times, increasing its  cooldown  by  5s  per cast.",
+        "energyCost": 17,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 3,
+        "rangeLabel": "3m",
+        "cooldownS": 10
+      }
+    },
+    {
+      "weapon": {
+        "name": "Deathgivers",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "name": "Ghost Strike",
+        "icon": "https://render.albiononline.com/v1/spell/Ghost Strike.png?size=217&locale=en",
+        "description": "Charge  through the targeted enemy, dealing  635 magical damage . Turns you  invisible  for  1s . Reduces  Energy Costs  by  50%  for  3s . If the target has  3 Sunder Armor Charges  or you have  3 Assassin Spirit Charges , the ability doesn't go on cooldown. Consumes all Assassin Spirit Charges or Sunder Armor Charges you have applied.",
+        "energyCost": 44,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 7,
+        "rangeLabel": "7m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Bridled Fury",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "name": "Merciless Finish",
+        "icon": "https://render.albiononline.com/v1/spell/Merciless Finish.png?size=217&locale=en",
+        "description": "Swing your daggers in a cone in front of you while  leaping backwards 8m . Deals  physical damage   based  on the  number  of  Assassin Spirit Charges  on you or  Sunder Armor Charges  on the target.\nCharges:  0  |  1  |  2  |  3 \nDamage:  289  |  461  |  691  |  976 \nConsumes all applied Assassin Spirit Charges or Sunder Armor Charges",
+        "energyCost": 55,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 6,
+        "rangeLabel": "6m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Double Bladed Staff",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "name": "Soaring Swipe",
+        "icon": "https://render.albiononline.com/v1/spell/Soaring Swipe.png?size=217&locale=en",
+        "description": "Leap towards the targeted position, dealing 265 physical damage in a 6m radius .\nSlows all enemies hit by 50% for 4.84s.",
+        "energyCost": 53,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Quarterstaff",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "name": "Vault Leap",
+        "icon": "https://render.albiononline.com/v1/spell/Vault Leap.png?size=217&locale=en",
+        "description": "Vault Leap to the targeted position, dealing 629 physical damage in a 5m radius(can't be interrupted). Throws all enemies hit into the air for 0.7s.",
+        "energyCost": 50,
+        "castTimeS": 0.6,
+        "castTimeLabel": "0.6s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Iron-clad Staff",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "name": "Hurricane",
+        "icon": "https://render.albiononline.com/v1/spell/Hurricane.png?size=217&locale=en",
+        "description": "Whirl your staff in a 5m radius around you, dealing 106 physical damage every 0.5s, while channeling for 2s(can move while channeling).\nEnemy players will be knocked back by 12m(ignoring crowd control resistance). Mobs will have their spell casting interrupted.",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "self",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Black Monk Stave",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "name": "Fatal Blade",
+        "icon": "https://render.albiononline.com/v1/spell/Fatal Blade.png?size=217&locale=en",
+        "description": "Throw a demonic version of your weapon at the targeted position, which lands and spins in a 5m radius for 5s. Deals 83 physical damage every 0.75s. Slows all enemies within its radius by 8% and reduces all damage they deal by 22%(vs players)/ 10%(vs mobs) every 0.75s(stacks up to 4 times). The debuff lasts for 6s after leaving the radius.",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 22.4
+      }
+    },
+    {
+      "weapon": {
+        "name": "Soulscythe",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "name": "Tornado",
+        "icon": "https://render.albiononline.com/v1/spell/Tornado.png?size=217&locale=en",
+        "description": "Send a tornado in the targeted direction, passing through all enemies and dealing 505 magical damage. Throws them in the air for 1.4s(ignoring Crowd Control Resistance and duration modifier). Slows all enemies within a 3m radius of the tornado by 80%",
+        "energyCost": 70,
+        "castTimeS": 0,
+        "castTimeLabel": "Instant",
+        "isChanneled": false,
+        "rangeM": 25,
+        "rangeLabel": "25m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Staff of Balance",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "name": "Mystic Rocks",
+        "icon": "https://render.albiononline.com/v1/spell/Mystic Rocks.png?size=217&locale=en",
+        "description": "Conjure a cloud of Mystic Rocks in a 6m radius around you, slowing all enemies within it by 50%. Reduces their Healing Received by 35%. Increases your damage resistances by 60.\nNegates all your Healing Received. Purges all healing over time effects on you.\nThe ability lasts up to 15s but can be deactivated sooner.",
+        "energyCost": 20,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "self",
+        "cooldownS": 32
+      }
+    },
+    {
+      "weapon": {
+        "name": "Grailseeker",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "name": "Soul Shaker",
+        "icon": "https://render.albiononline.com/v1/spell/Soul Shaker.png?size=217&locale=en",
+        "description": "Shake the ground along a 20m long line in the targeted direction, dealing 414 physical damage.\nLeaves behind a wall of energy that lasts 3.5s, rooting all enemies who touch it for its duration.\nThe spell can be recast again within 3s, increasing its cooldown by 20s.",
+        "energyCost": 40,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 20,
+        "rangeLabel": "20m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Fire Staff",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "name": "Pyroblast",
+        "icon": "https://render.albiononline.com/v1/spell/Pyroblast.png?size=217&locale=en",
+        "description": "Charge up a Pyroblast, while channeling for up to 1.2s ( You can aim while channeling).\nDeals magical damage upon impact with an enemy within a 4m radius based on how long you have channeled.\n\nTime: 0s / 0.6s / 1.2s\nDamage: 574 / 804 / 1033\nIf you channel for 1.2s the Pyroblast will also knock back all enemies hit by 3.5m.",
+        "energyCost": 43,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Great Fire Staff",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "name": "Flame Pillar",
+        "icon": "https://render.albiononline.com/v1/spell/Flame Pillar.png?size=217&locale=en",
+        "description": "Conjure a flaming pillar with a 4m radius around the targeted position after 0.8s, dealing\n599 magical damage to all enemies hit.\nHitting at least one enemy reduces the cooldown of the ability by 5s.",
+        "energyCost": 28,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Infernal Staff",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "name": "Combustion",
+        "icon": "https://render.albiononline.com/v1/spell/Combustion.png?size=217&locale=en",
+        "description": "Torch the targeted enemy, dealing 451 magical damage over 5s. The burning enemy will flee from you for 0.75s. While burning they leave a fiery trail which lasts 4.5s.\nThe trail deals 82 magical damage(vs. players) / 88 magical damage(vs. mobs) every 0.5s(the damage can't be reflected). Enemies touching the trail will flee from you for 0.75s.",
+        "energyCost": 38,
+        "castTimeS": 0.7,
+        "castTimeLabel": "0.7s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Wildfire Staff",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "name": "Magma Sphere",
+        "icon": "https://render.albiononline.com/v1/spell/Magma Sphere.png?size=217&locale=en",
+        "description": "Release a devastating magma sphere in the targeted direction, rolling through all enemies\nDeals 689 magical damage.\nEnemy players who are not mounted will take 12% of their Max Health as true damage over 4s (this damage can't be reflected).",
+        "energyCost": 59,
+        "castTimeS": 0.6,
+        "castTimeLabel": "0.6s",
+        "isChanneled": false,
+        "rangeM": 25,
+        "rangeLabel": "25m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Brimstone Staff",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "name": "Meteor",
+        "icon": "https://render.albiononline.com/v1/spell/Meteor.png?size=217&locale=en",
+        "description": "Call down a meteor, impacting after 1s at the targeted position.\nDeals 1369 magical damage to all enemies in a 5m radius (this damage cannot be reflected).\nKnocks back all enemies hit by 4.74m.",
+        "energyCost": 79,
+        "castTimeS": 2,
+        "castTimeLabel": "2s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Blazing Staff",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "name": "Flame Tornado",
+        "icon": "https://render.albiononline.com/v1/spell/Flame Tornado.png?size=217&locale=en",
+        "description": "Conjures a Flame Tornado with a 5.01m radius at the targeted position lasting 5.3s.\nDeals 189 magical damage (vs. players) / 137 magical damage (vs. mobs) every 0.5s.\nEnemies leaving the area will continue to take 568 magical damage (vs. players) / 411 magical damage (vs. mobs) over 1s (damage can't be reflected).",
+        "energyCost": 88,
+        "castTimeS": 1,
+        "castTimeLabel": "1s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 45
+      }
+    },
+    {
+      "weapon": {
+        "name": "Dawnsong",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "name": "Flaming Phoenix",
+        "icon": "https://render.albiononline.com/v1/spell/Flaming Phoenix.png?size=217&locale=en",
+        "description": "Summon a Flaming Phoenix that breathes fire over a 18m long area from the targeted position in the targeted direction.\nDeals 709 magical damage to all enemies hit.\nSets the ground on fire for 6s.\nEnemies within the area take 35 magical damage every 0.5s.\nAlso reduces Healing Cast by 40%.",
+        "energyCost": 72,
+        "castTimeS": 0.6,
+        "castTimeLabel": "0.6s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Great Holy Staff",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "name": "Holy Explosion",
+        "icon": "https://render.albiononline.com/v1/spell/Holy Explosion.png?size=217&locale=en",
+        "description": "Release a Holy Explosion in a 7m radius around you, knocking back all enemies hit by 23.04m. Heals up to 5m for 107 every 0.5s, while channeling for 2s. Increases the damage resistances of allies hit by the first tick by 35 for 3s.\nEach 0.5s channeling costs 13 Energy",
+        "energyCost": 0,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "0m",
+        "cooldownS": 18
+      }
+    },
+    {
+      "weapon": {
+        "name": "Divine Staff",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "name": "Divine Protection",
+        "icon": "https://render.albiononline.com/v1/spell/Divine Protection.png?size=217&locale=en",
+        "description": "Give the targeted ally a  shield, absorbing up to  1439 damage (before resistances) for  4s .\nIf the shield  isn't broken  during its duration, it will release a healing pulse, restoring  247 Health  for up to  5  allies in a  5m radius  around the target.",
+        "energyCost": 50,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 13,
+        "rangeLabel": "13m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Holy Staff",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "name": "Desperate Prayer",
+        "icon": "https://render.albiononline.com/v1/spell/Desperate Prayer.png?size=217&locale=en",
+        "description": "Cast a Desperate Prayer on the targeted ally, healing the target based on their current Health.\nCurrent Health: above 40% | below 40%\nHealing: 201 | 443\nIf the current Health of your target is above 40%, your Healing Cast is increased by 5% for 15s(stacks up to 3 times).",
+        "energyCost": 34,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 13,
+        "rangeLabel": "13m",
+        "cooldownS": 10
+      }
+    },
+    {
+      "weapon": {
+        "name": "Lifetouch Staff",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "name": "Holy Touch",
+        "icon": "https://render.albiononline.com/v1/spell/Holy Touch.png?size=217&locale=en",
+        "description": "Cover the targeted ally in divine light, healing the target for 129 Health every 0.6s, while channeling for up to 3s(can be used while stunned or silenced). Cleanses all Crowd Control effects and debuffs(except damage over time effects).",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 6,
+        "rangeLabel": "6m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Fallen Staff",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "name": "Salvation",
+        "icon": "https://render.albiononline.com/v1/spell/Salvation.png?size=217&locale=en",
+        "description": "Create a circle of Salvation with a 5.5m radius around the targeted position, charging up for 2s. Once it is finished charging, it will heal up to 10 allies for 578 Health. Cleanses all Crowd Control effects and debuffs(except for damage over time effects).",
+        "energyCost": 57,
+        "castTimeS": 1,
+        "castTimeLabel": "1s",
+        "isChanneled": false,
+        "rangeM": 14,
+        "rangeLabel": "14m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Redemption Staff",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "name": "Celestial Sphere",
+        "icon": "https://render.albiononline.com/v1/spell/Celestial Sphere.png?size=217&locale=en",
+        "description": "Cast a Celestial Sphere at the targeted ally. Jumps to the closest ally within a 11m radius of the last ally hit, restoring 182 Health with each hit(can hit up to 10 targets; can hit the same target multiple times, but not twice in a row).",
+        "energyCost": 34,
+        "castTimeS": 0.5,
+        "castTimeLabel": "0.5s",
+        "isChanneled": false,
+        "rangeM": 10,
+        "rangeLabel": "10m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Hallowfall",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "name": "Divine Intervention",
+        "icon": "https://render.albiononline.com/v1/spell/Divine Intervention.png?size=217&locale=en",
+        "description": "Leap  towards the targeted position, becoming immune to damage, debuffs, and Crowd Control effects until impact. Throws all enemies within a 5m radius in the air for 0.8s. Restores 272 Health for up to 10 allies within a 5m radius.\nHealing at least one ally reduces this ability cooldown by 40%.",
+        "energyCost": 52,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Great Arcane Staff",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "name": "Time Freeze",
+        "icon": "https://render.albiononline.com/v1/spell/Time Freeze.png?size=217&locale=en",
+        "description": "Freeze time for all enemies within a 5m radius for 3s(vs. players)/4s(vs. mobs)(ignores Crowd Control Resistance). Targets frozen in time are stunned. Players frozen in time are also immune to damage and all abilities.\nTargets cannot be frozen again for 5s.",
+        "energyCost": 47,
+        "castTimeS": 0,
+        "castTimeLabel": "0",
+        "isChanneled": false,
+        "rangeM": 14,
+        "rangeLabel": "14m",
+        "cooldownS": 34
+      }
+    },
+    {
+      "weapon": {
+        "name": "Enigmatic Staff",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "name": "Protective Beam",
+        "icon": "https://render.albiononline.com/v1/spell/Protective Beam.png?size=217&locale=en",
+        "description": "Conjures an arcane shield in a 5m radius around the targeted ally, while channeling for 9s. Absorbs up to 631 damage(before resistances). Reapplies the shield every 1s, costing 19 Energy.\nThe shield lastst up to 2s after the channel has ended.",
+        "energyCost": 19,
+        "castTimeS": 0,
+        "castTimeLabel": "0",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Arcane Staff",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "name": "Arcane Orb",
+        "icon": "https://render.albiononline.com/v1/spell/Arcane Orb.png?size=217&locale=en",
+        "description": "Shoot a sphere of arcane energy in the targeted direction, dealing 210 magical damage in a 6m radius upon impact with an enemy. Purges all buffs on enemies hit(except for healing over time effects). Silences enemies for 2.35s(vs players)/ 4.7s(vs mobs).",
+        "energyCost": 43,
+        "castTimeS": 0,
+        "castTimeLabel": "0",
+        "isChanneled": false,
+        "rangeM": 25,
+        "rangeLabel": "25m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Witchwork Staff",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "name": "Black Hole",
+        "icon": "https://render.albiononline.com/v1/spell/Black Hole.png?size=217&locale=en",
+        "description": "Create a black hole with a 6m radius at the targeted position.  After 1s, the black hole pulls all enemies within its radius towards its center. Deals 463 magical damage. Slows by 16% for 6.99s",
+        "energyCost": 52,
+        "castTimeS": 0,
+        "castTimeLabel": "0",
+        "isChanneled": false,
+        "rangeM": 14,
+        "rangeLabel": "14m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Occult Staff",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "name": "Time Corridor",
+        "icon": "https://render.albiononline.com/v1/spell/Time Corridor.png?size=217&locale=en",
+        "description": "Create a 25m long corridor of altered time in the targeted direction, lasting for 8s. Increases Move Speed by 60% and Attack Speed by 45% for all allies in the corridor.\nSlows all enemies in the corridor by 30%.",
+        "energyCost": 15,
+        "castTimeS": 0,
+        "castTimeLabel": "0",
+        "isChanneled": false,
+        "rangeM": 25,
+        "rangeLabel": "25m",
+        "cooldownS": 32.5
+      }
+    },
+    {
+      "weapon": {
+        "name": "Malevolent Locus",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "name": "The Void",
+        "icon": "https://render.albiononline.com/v1/spell/The Void.png?size=217&locale=en",
+        "description": "Creates an area which removes all positive effects from enemies and removes all negative effects from allies, while also Increasing the resistances of allies by 85. While channeling, the area grows from 2m up to 8m radius, and collapses once the channeling ends. The channel can't be interrupted and lasts for 5s.",
+        "energyCost": 20,
+        "castTimeS": 0,
+        "castTimeLabel": "channeled",
+        "isChanneled": true,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 46
+      }
+    },
+    {
+      "weapon": {
+        "name": "Evensong",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "name": "Dark Sphere",
+        "icon": "https://render.albiononline.com/v1/spell/Dark Sphere.png?size=217&locale=en",
+        "description": "Call down a dark sphere, impacting after 0.4s. Deals 315 magical damage to all enemies in a 5m radius. Applies a Dark Aura on up to 3 enemies hit.\nEach Dark Aura has a 5m radius around the affected enemy lasting for 5s. Decreases healing received by 25% and all damage dealt by 25%(vs players)/ by 12%(vs mobs) within the aura. Slows by 15%(all effects stack up to 3 times).",
+        "energyCost": 16,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 31
+      }
+    },
+    {
+      "weapon": {
+        "name": "Glacial Staff",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "name": "Ice Storm",
+        "icon": "https://render.albiononline.com/v1/spell/Ice Storm.png?size=217&locale=en",
+        "description": "Summon an ice storm with a 5m radius, moving from the targeted position in the targeted direction for 18m and lasting for 15s. Deals 227 magical damage(vs. players) / 79 magical damage(vs. mobs) to all enemies within the storm every 0.5s(damage can't be reflected). Slows by 30%.",
+        "energyCost": 73,
+        "castTimeS": 1,
+        "castTimeLabel": "1s",
+        "isChanneled": false,
+        "rangeM": 10,
+        "rangeLabel": "10m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Great Frost Staff",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "name": "Hail",
+        "icon": "https://render.albiononline.com/v1/spell/Hail.png?size=217&locale=en",
+        "description": "Conjure a wave of hail with a 5m radius around the targeted position, which crashes down after 0.4s. Deals 448 magical damage.\nThe spell can be recast within 3s.",
+        "energyCost": 47,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Frost Staff",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "name": "Freezing Wind",
+        "icon": "https://render.albiononline.com/v1/spell/Freezing Wind.png?size=217&locale=en",
+        "description": "Blow Freezing Wind in a cone in front of you, dealing 499 magical damage. Enemies inside the Freezing Wind become gradually frozen over 0.8s, first slowing them, then ending in a root for 3.5s.",
+        "energyCost": 46,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 18
+      }
+    },
+    {
+      "weapon": {
+        "name": "Hoarfrost Staff",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "name": "Avalanche",
+        "icon": "https://render.albiononline.com/v1/spell/Avalanche.png?size=217&locale=en",
+        "description": "Launch a giant snowball in the targeted direction, rolling over all enemies. Deals 172 magical damage(damage cannot be reflected). The snowball starts with a 2m radius, growing up to 3.1m while it rolls.\nThe snowball leaves behind a freezing trail, lasting 4s. Slows all enemies on it by \n40%.\nRecast the ability to cause the snowball to explode, dealing 459 magical damage(damage cannot be reflected) within a 4m radius. Stuns all enemies hit for 1.86s.",
+        "energyCost": 43,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 26,
+        "rangeLabel": "26m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Icicle Staff",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "name": "Frozen Hell",
+        "icon": "https://render.albiononline.com/v1/spell/Frozen Hell.png?size=217&locale=en",
+        "description": "Create a blizzard with a 8m radius at the targeted position, lasting 5s. Deals 69 magical damage to all enemies in it every 1s. Slows by 50%(ignores Crowd Control Resistance).",
+        "energyCost": 63,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 14,
+        "rangeLabel": "14m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Permafrost Prism",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "name": "Ice Crystal",
+        "icon": "https://render.albiononline.com/v1/spell/Ice Crystal.png?size=217&locale=en",
+        "description": "Create an Ice Crystal with a 4m radius at the targeted position, stunning all enemies hit for 1s. After the stun, the crystal explodes, dealing 582 magical damage(vs. players) / 800 magical damage(vs. mobs) to all enemies within a 4m radius(the damage cant be reflected.",
+        "energyCost": 66,
+        "castTimeS": 0.7,
+        "castTimeLabel": "0.7s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Chillhowl",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "name": "Glacial Prison",
+        "icon": "https://render.albiononline.com/v1/spell/Glacial%20Prison.png?locale=en",
+        "description": "Create a freezing field in a 6m radius around the target, lasting 3s. Slows all enemies in it by 30% (ignores Crowd Control Resistance).\nTargeting an ally will freeze the target in a crystal immediately for 2s. Targeting an enemy will freeze the target in a crystal after 1.1s for 2s, if it hasn't left the field. Frozen targets are stunned, immune to damage, and can't be healed. \nAfter the freeze ends, the crystal explodes, dealing 640 magical damage to all enemies within a 2m radius.",
+        "energyCost": 61,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Great Cursed Staff",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "name": "Area of Decay",
+        "icon": "https://render.albiononline.com/v1/spell/Area of Decay.png?size=217&locale=en",
+        "description": "Create an Area of Decay with a 4m radius, applying Vile Curse charges every 0.8s, while channeling for 3.2s. Purges healing over time effects from all enemies in the area.\nEach Vile Curse Charge deals 267 magical damage over 8s(stacks up to 4 times).",
+        "energyCost": 54,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Demonic Staff",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "name": "Anguished Soul",
+        "icon": "https://render.albiononline.com/v1/spell/Anguished Soul.png?size=217&locale=en",
+        "description": "Send an Anguished Soul in the targeted direction, passing through all enemies. Deals 505 magical damage.\nAny enemy hit will be feared for a duration based on the amount of Vile Curse Charges on them. \n\nCharges:  0 | 1 | 2 | 3 | 4\nFear Duration: 1s | 1.25s | 1.5s | 1.75s | 2s",
+        "energyCost": 61,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "isChanneled": false,
+        "rangeM": 22,
+        "rangeLabel": "22m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Cursed Staff",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "name": "Death Curse",
+        "icon": "https://render.albiononline.com/v1/spell/Death Curse.png?size=217&locale=en",
+        "description": "Place a Death Curse on the targeted enemy after 0.15s, dealing  magical damage based on the amount  of Vile Curse Charges on the target after 5s (the damage cannot be reflected).\nCharges: 0 | 1 | 2 | 3 | 4\nDamage: 453 | 680 | 907 | 1179 | 1541\nConsumes all Vile Curse Charges on the enemy.",
+        "energyCost": 43,
+        "castTimeS": 0.6,
+        "castTimeLabel": "0.6s",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Lifecurse Staff",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "name": "Enfeeble Blades",
+        "icon": "https://render.albiononline.com/v1/spell/Enfeeble Blades.png?size=217&locale=en",
+        "description": "Summon enfeebling blades, spinning in a 5m radius around the targeted location while channeling for 4s(can't be interrupted). The blades deal 95 magical damage every 0.5s.\nPurges all buffs of all enemies within the area. Decreases all damage an enemy deals by 4% for each hit they have received (stacks up to 5 times) for 3s.",
+        "energyCost": 73,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 40.5
+      }
+    },
+    {
+      "weapon": {
+        "name": "Cursed Skull",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "name": "Haunting Screams",
+        "icon": "https://render.albiononline.com/v1/spell/SKULLCURSE.png?size=217&locale=en",
+        "description": "Summon tortured souls for 5.3s, haunting the ground in a 6m radius around the targeted position and moving 12m in the targeted direction. Deals 88 magical damage every 0.5s to all enemies within the area (the damage can't be reflected).\nPlayers will also take 1.2% of their Max Health as true damage every 0.5s.",
+        "energyCost": 66,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Damnation Staff",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "name": "Cataclysm",
+        "icon": "https://render.albiononline.com/v1/spell/Cataclysm.png?size=217&locale=en",
+        "description": "Curse all enemies within a 13m radius around the targeted position, dealing 341 magical damage over 5.5s. Decreases damage resistance by 53.",
+        "energyCost": 97,
+        "castTimeS": 2.5,
+        "castTimeLabel": "2.5s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Prowling Staff",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "name": "Pounce",
+        "icon": "https://render.albiononline.com/v1/spell/Pounce.png?size=217&locale=en",
+        "description": "Leap towards target position, dealing 520 physical damage in a 4m radius upon impact.\nHitting an enemy player, will reduce the cooldown of this ability by 50%.",
+        "energyCost": 0,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 10
+      }
+    },
+    {
+      "weapon": {
+        "name": "Rootbound Staff",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "name": "Barbed Roots",
+        "icon": "https://render.albiononline.com/v1/spell/Barbed Roots.png?size=217&locale=en",
+        "description": "Gather nature's energy, becoming immune to damage, while channeling for up to 3s (can't be interrupted; can be used while stunned or silenced). Slows all enemies within a 11m radius by 50%. Deals 173 magical damage every 0.7s.\nAt the start of the channel, cleanse all Crowd Control effects and debuffs (except damage over time effects) of up to 20 allies in the radius. While in the radius, allies gain a shield that absorbs up to 662 damage during the next 3s. Grants immunity to Forced Movement effects.",
+        "energyCost": 0,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 11,
+        "rangeLabel": "11m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Primal Staff",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "name": "Wild Onslaught",
+        "icon": "https://render.albiononline.com/v1/spell/Wild Onslaught.png?size=217&locale=en",
+        "description": "Combine up to 2 abilities. The combo resets after 8s.\n1st Wild Onslaught: \nDash in the target direction knocking back all enemies you pass through by 3.07m. Deals 158 physical damage. Decreases damage resistances by 53 for 5s.\n2nd Roar: \nUnleash a mighty roar, dealing 410 physical damage(vs players)/631 physical damage(vs mobs) in a cone in front of you. Enemies hit will flee from you for 1.2s. Makes you the highest-priority target for all mobs hit.",
+        "energyCost": 0,
+        "castTimeS": 0.3,
+        "castTimeLabel": "0.3s",
+        "isChanneled": false,
+        "rangeM": 14,
+        "rangeLabel": "14m",
+        "cooldownS": 4
+      }
+    },
+    {
+      "weapon": {
+        "name": "Bloodmoon Staff",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "name": "Rip Through",
+        "icon": "https://render.albiononline.com/v1/spell/Rip Through.png?size=217&locale=en",
+        "description": "Dash through targeted enemy, landing 3m behind them. Deals 505 physical damage to any enemy you pass through. Increases your attack damage by 150% for 3s.",
+        "energyCost": 0,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 6,
+        "rangeLabel": "6m",
+        "cooldownS": 5
+      }
+    },
+    {
+      "weapon": {
+        "name": "Hellspawn Staff",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "name": "Hellfire Barrage",
+        "icon": "https://render.albiononline.com/v1/spell/Hellfire Barrage.png?size=217&locale=en",
+        "description": "Release a Hellfire Barrage at the targeted enemy, slowing yourself by 30%, while channeling for up to 3s. Deals 101 magical damage ever 0.2s.",
+        "energyCost": 0,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 12
+      }
+    },
+    {
+      "weapon": {
+        "name": "Earthrune Staff",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "name": "Tectonic Shift",
+        "icon": "https://render.albiononline.com/v1/spell/Tectonic Shift.png?size=217&locale=en",
+        "description": "Combine up to two abilities. The combo resets after 4s.\n1st Tectonic Shift \nShift the ground, creating a stone wall in a cone in front of you which knocks back enemies by 2m. Pulls all enemies between you and the wall towards you. Deals 189 physical damage(vs players)/441 physical damage(vs mobs) to all enemies pulled. Makes you the highest-priority target for all mobs hit.\n2nd Tectonic Slam \nSlam the ground, dealing 394 physical damage in a 6m radius. Throws all enemies hit into the air for 3.07s. Creates a Rune, lasting 5s which decreases Max and current Health of all enemies within by 15%.",
+        "energyCost": 0,
+        "castTimeS": 0.7,
+        "castTimeLabel": "0.7s",
+        "isChanneled": false,
+        "rangeM": 8,
+        "rangeLabel": "8m",
+        "cooldownS": 11
+      }
+    },
+    {
+      "weapon": {
+        "name": "Lightcaller",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "name": "Judgment",
+        "icon": "https://render.albiononline.com/v1/spell/Judgment.png?size=217&locale=en",
+        "description": "Launch a beam of immense energy at the targeted enemy, dealing 1104 magical damage in a 7m radius after 1.5s (this damage cannot be reflected).",
+        "energyCost": 0,
+        "castTimeS": 1.5,
+        "castTimeLabel": "1.5s",
+        "isChanneled": false,
+        "rangeM": 18,
+        "rangeLabel": "18m",
+        "cooldownS": 30
+      }
+    }
+  ],
+  "manualEntries": [
+    {
+      "weapon": {
+        "name": "Crystal Reaper",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Relentless Assault",
+        "icon": "https://render.albiononline.com/v1/spell/Relentless%20Assault.png?locale=en",
+        "description": "Dash in the targeted direction, dealing 381 physical damage (vs players) / 344 physical damage (vs mobs) to all enemies you pass through.\nConjure an area with a 15m radius around you after dashing, lasting 12s.\nWhile inside the area, hitting at least one enemy will reduce the cooldown of your weapon abilities by 33%.\nThe ability can be recast every 3s while the ability is active",
+        "energyCost": 58,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 3,
+        "rangeLabel": "3m",
+        "cooldownS": 20
+      }
+    },
+    {
+      "weapon": {
+        "name": "Infinity Blade",
+        "subcategoryName": "Sword"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Limitbreaker",
+        "icon": "https://render.albiononline.com/v1/spell/Limitbreaker.png?locale=en",
+        "description": "Combine up to two abilities. The combo resets 6s after the first ability has ended.\n1st Reach Limits:\nConcentrate your power, increasing your Move Speed by 30% while channeling for up to 2s.\nIncreases all damage you deal by 35% for 6s.\nEnding the channel enables the next combo ability.\n\n2nd Limitbreaker:\nSwipe your sword twice in a cone in front of you, dealing 370 physical damage with each swipe.",
+        "energyCost": "20 / 40",
+        "castTimeS": 0,
+        "castTimeLabel": "0s / 0s",
+        "rangeM": 0,
+        "rangeLabel": "Self / 11m",
+        "cooldownS": "19s / 25s"
+      }
+    },
+    {
+      "weapon": {
+        "name": "Dreadstorm Monarch",
+        "subcategoryName": "Mace"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Eye of the Storm",
+        "icon": "https://render.albiononline.com/v1/spell/Eye%20of%20the%20Storm.png?locale=en",
+        "description": "Combine up to three abilities. The combo resets after 4s.\n1st & 2nd Dreadstorm Sweep:\nSwing your weapon in a cone in front of you, dealing 144 physical damage to all enemies hit.\nIf you hit at least one enemy, gain one Eye of the Storm charge.\n\n3rd Dreadstorm Surge:\nSmash the ground in front of you, dealing 313 physical damage in a 4m radius.\nCasting this ability grants you one Eye of the Storm charge.\n\nEye of the Storm:\nBecome the center of a storm that grows in size based on your Eye of the Storm charges, lasting 5s.\nReduces damage resistances of all enemies in the storm by 52 and slows them by 25%.\n\nEye of the Storm Charges: 1 | 2 | 3\nEye of the Storm Radius: 6m | 7.5m | 9m",
+        "energyCost": "14 / 14 / 14",
+        "castTimeS": 0,
+        "castTimeLabel": "0s / 0s / 0s",
+        "rangeM": 0,
+        "rangeLabel": "3m / 3m / 4m",
+        "cooldownS": "12s / 16s / 20s"
+      }
+    },
+    {
+      "weapon": {
+        "name": "Truebolt Hammer",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Hyperstatic",
+        "icon": "https://render.albiononline.com/v1/spell/Hyperstatic.png?locale=en",
+        "description": "Smash the ground in front of you, opening a vein of charged magical energy.\nAllies in the area gain a Shield, absorbing up to 1104 damage (before resistances) for up to 4s.\n\nDeals 284 magical damage to enemies.\nApplies one Static stack for 6s.\nEnemies gain one additional Static stack whenever they receive direct damage.\nStuns enemies with 5 Static stacks for 4.92s.",
+        "energyCost": 54,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 15,
+        "rangeLabel": "15m",
+        "cooldownS": 25
+      }
+    },
+    {
+      "weapon": {
+        "name": "Forcepulse Bracers",
+        "subcategoryName": "War Gloves"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Unstoppable Rush",
+        "icon": "https://render.albiononline.com/v1/spell/Unstoppable%20Rush.png?locale=en",
+        "description": "Dash to a targeted enemy, releasing a Pulse of raw energy, dealing 156 magical damage.\nDecreases Max and Current Health by 3% for 5s (stacks up to 5 times).\nGain 3 Pulse Charges for the next 3s.\nPulse Charges release an additional Pulse with each Weapon ability or Auto-Attack.\n\nThe ability can be recast within 5s, increasing its cooldown to 30s (elapsed time before recasting is refunded).",
+        "energyCost": 33,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 9,
+        "rangeLabel": "9m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Arclight Blasters",
+        "subcategoryName": "Crossbow"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Flickershots",
+        "icon": "https://render.albiononline.com/v1/spell/Flickershots.png?locale=en",
+        "description": "Dash to the targeted position, unleashing a barrage of energy bolts in a 8m radius around you.\nDeals 318 physical damage.\nGain 103 damage resistances while dashing.\nThe ability can be recast within 5s up to 3 times, increasing its cooldown by 10s per cast.",
+        "energyCost": 19,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 8,
+        "rangeLabel": "8m",
+        "cooldownS": 10
+      }
+    },
+    {
+      "weapon": {
+        "name": "Skystrider Bow",
+        "subcategoryName": "Bow"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Sky's Fury",
+        "icon": "https://render.albiononline.com/v1/spell/Sky%27s%20Fury.png?locale=en",
+        "description": "Leap to the targeted position and conjure a foothold in the air, becoming Untargetable for up to 3.75s.\nIncreases your Defense vs. mobs by 90% for 3.75s.\nSky Bolt:\nShoot a lightning-infused arrow at the targeted position, dealing 441 magical damage in a 4m radius to all enemies after 0.4s.\n\nThe ability can be recast up to 3 times while Sky's Fury is active, firing a Sky Bolt.\nAfter 3 Sky Bolt casts, Sky's Fury ends.",
+        "energyCost": "38 / 9",
+        "castTimeS": 0,
+        "castTimeLabel": "0s / 0s",
+        "rangeM": 0,
+        "rangeLabel": "10m / 18m",
+        "cooldownS": "25s / 0s"
+      }
+    },
+    {
+      "weapon": {
+        "name": "Twin Slayers",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Ring of Death",
+        "icon": "https://render.albiononline.com/v1/spell/Ring%20of%20Death.png?locale=en",
+        "description": "Combine up to two abilities. The combo resets after 6s (elapsed time before recasting is refunded).\n1st Ring of Death:\nThrow six daggers in a 7m radius around you, piercing through all enemies and dealing 178 physical damage.\nThe daggers form a ring that deals 102 physical damage every 0.5s, lasting 6s.\nIncreases your Move Speed by 40% for up to 2s.\n\n2nd Recall Daggers:\nRecall all daggers to your current position.\nEach dagger can pierce a maximum of 4 targets.\nDeal physical damage depending on the total amount of daggers that hit a target.\n\nAmount of Daggers: 1 | 2 | 3 | 4 | 5 | 6\nDamage: 208 | 416 | 624 | 832 | 1041 | 1249",
+        "energyCost": "38 / 0",
+        "castTimeS": 0,
+        "castTimeLabel": "0s / 0s",
+        "rangeM": 0,
+        "rangeLabel": "7m / 25m",
+        "cooldownS": "9s / 25s"
+      }
+    },
+    {
+      "weapon": {
+        "name": "Rift Glaive",
+        "subcategoryName": "Spear"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Razor's Edge",
+        "icon": "https://render.albiononline.com/v1/spell/Razor%27s%20Edge.png?locale=en",
+        "description": "Unleash a vast amount of force in a line in front of you, knocking back all enemies hit within 8m by 7.07m.\nDeals physical damage to all enemies hit within 17m based on the amount of Spirit Spear Charges on you.\n\nCharges: 0 | 1 | 2 | 3\nDamage: 508 | 653 | 798 | 943\nConsumes all your Spirit Spear Charges.",
+        "energyCost": 73,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s",
+        "rangeM": 17,
+        "rangeLabel": "17m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Phantom Twinblade",
+        "subcategoryName": "Quarterstaff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Phantom Twin",
+        "icon": "https://render.albiononline.com/v1/spell/Phantom%20Twin.png?locale=en",
+        "description": "Combine up to 3 abilities. The combo resets after 5s.\n1st & 2nd: Phantom Twin\nSummon a projection for 2s, slashing around itself in a 5m radius at the targeted position and moving 6m away from you.\nDeals 136 physical damage every 0.5s within the radius (damage cannot be reflected).\nSlows by 15%.\n\n3rd: Phantom Slash\nSlam the ground in a 5m radius around the targeted position in sync with a projection, throwing all enemies hit in the air for 0.7s.\nDeals 434 physical damage.",
+        "energyCost": "17 / 23",
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 0,
+        "rangeLabel": "9m / 5m",
+        "cooldownS": "10s / 20s"
+      }
+    },
+    {
+      "weapon": {
+        "name": "Stillgaze Staffs",
+        "subcategoryName": "Shapeshifter Staff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Serpent's Gaze",
+        "icon": "https://render.albiononline.com/v1/spell/Serpent%27s%20Gaze.png?locale=en",
+        "description": "Transform into a Crystal Cobra for up to 15s.\nThis changes your abilities and stats.\nOffensive: medium\nDefensive: medium\nEnergy Regeneration: very high\nSlippery\nThe next time you are Stunned or Rooted, Cleanse yourself, and gain 40% Move Speed and Immunity to Stuns and Roots for 2s.",
+        "energyCost": 0,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 0,
+        "rangeLabel": "self",
+        "cooldownS": 12
+      }
+    },
+    {
+      "weapon": {
+        "name": "Forgebark Staff",
+        "subcategoryName": "Nature Staff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Dual Nature",
+        "icon": "https://render.albiononline.com/v1/spell/Dual%20Nature.png?locale=en",
+        "description": "Gather ambient magic, affecting up to 10 targets in a 7m radius around you for 8s.\nWhile the ability is active, recasting invokes the opposing ability.\nFortify:\nGrants a 491 damage shield for 1.5s.\nRestores 64 Health to allies every 0.85s.\nIncreases your Healing Cast by 15%.\n\nEnsnare:\nRoots enemies for 3.15s (enemies cannot be Rooted by you again).\nIncreases allies' Damage by 15%.",
+        "energyCost": 52,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 0,
+        "rangeLabel": "self",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Flamewalker Staff",
+        "subcategoryName": "Fire Staff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Spontaneous Combustion",
+        "icon": "https://render.albiononline.com/v1/spell/Spontaneous%20Combustion.png?locale=en",
+        "description": "Transform into a Fireball, becoming immune to All Effects as you Fly up to 14m towards the targeted position.\nDeal 542 to all enemies in a 5m radius on impact.\nDeal 181 over 2s to all enemies you pass through.\nHitting an enemy player with the impact will reduce this ability's cooldown by 40%.",
+        "energyCost": 55,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 14,
+        "rangeLabel": "14m",
+        "cooldownS": 40
+      }
+    },
+    {
+      "weapon": {
+        "name": "Exalted Staff",
+        "subcategoryName": "Holy Staff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Sanctify",
+        "icon": "https://render.albiononline.com/v1/spell/Sanctify.png?locale=en",
+        "description": "Sanctify an area at the targeted position, restoring 296 health for up to 20 allies in a 5m radius.\nIncreases the max and current health of all healed allies by 20% for 3s.\nRemoves enemy-placed ground-based areas (does not affect areas that buff or heal).",
+        "energyCost": 66,
+        "castTimeS": 0.6,
+        "castTimeLabel": "0.6s",
+        "rangeM": 12,
+        "rangeLabel": "12m",
+        "cooldownS": 43
+      }
+    },
+    {
+      "weapon": {
+        "name": "Astral Staff",
+        "subcategoryName": "Arcane Staff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Starfall",
+        "icon": "https://render.albiononline.com/v1/spell/Starfall.png?locale=en",
+        "description": "Call down a shooting star shower, dealing 199 magical damage in a 8m radius around you every 0.6s, while channelling for up to 6s (can't be interrupted).\nIncreases your Resilience Penetration by 20%.\nEach 1s channeled costs 13 Energy.",
+        "energyCost": 31,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 0,
+        "rangeLabel": "self",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Arctic Staff",
+        "subcategoryName": "Frost Staff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Arctic Volley",
+        "icon": "https://render.albiononline.com/v1/spell/Arctic%20Volley.png?locale=en",
+        "description": "Fire a volley of icicles in the targeted direction every 0.4s, while channeling for 2.2s (can move while channeling).\nEach volley deals 284 magical damage in a 4m radius on impact.\nSlows by 10% for 1s (stacks up to 6 times).\nCosts 9 energy for every volley fired.",
+        "energyCost": 9,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 22,
+        "rangeLabel": "22m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Rotcaller Staff",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "isChanneled": false,
+        "name": "Plaguebringer",
+        "icon": "https://render.albiononline.com/v1/spell/Plaguebringer.png?locale=en",
+        "description": "Conjure a Plaguebringer, knocking back all enemies by 6m (ignoring Crowd Control Resistance), and spreading cursed miasma in the targeted direction.\nDeals 491.\nNegates the target's Healing Received for 2s.\nTargets cannot have their Healing Received Negated by Plaguebringer for 6s.",
+        "energyCost": 52,
+        "castTimeS": 0,
+        "castTimeLabel": "instant",
+        "rangeM": 18,
+        "rangeLabel": "18m",
+        "cooldownS": 30
+      }
+    }
+  ]
+}

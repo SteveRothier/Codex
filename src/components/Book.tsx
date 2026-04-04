@@ -11,7 +11,7 @@ import {
 import Cover from './Cover'
 import Page from './Page'
 import { readStoredBookPage, writeStoredBookPage } from '../data/bookPageStorage'
-import { spells } from '../data/spells'
+import { weaponSpells } from '../data/weaponSpells'
 import { useFlipBookSize } from '../hooks/useFlipBookSize'
 
 function isTypingTarget(target: EventTarget | null) {
@@ -22,7 +22,7 @@ function isTypingTarget(target: EventTarget | null) {
 }
 
 function spreadSpellAt(index: number) {
-  return spells[index] ?? null
+  return weaponSpells[index] ?? null
 }
 
 type FlipBookRef = {
@@ -30,7 +30,7 @@ type FlipBookRef = {
 }
 
 export default function Book() {
-  const spellSpreadCount = Math.max(1, Math.ceil(spells.length / 2))
+  const spellSpreadCount = Math.max(1, Math.ceil(weaponSpells.length / 2))
   /** 1 couverture + 2 pages par spread de sorts + 1 quatrième de couverture */
   const pageCount = 2 + 2 * spellSpreadCount
 
