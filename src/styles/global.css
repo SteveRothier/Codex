@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-heading: 'Cinzel', 'Palatino Linotype', Palatino, serif;
+  --font-body: Georgia, 'Times New Roman', Times, serif;
+}
+
 html {
   height: 100dvh;
   overflow: hidden;
@@ -15,6 +20,27 @@ body {
   overflow: hidden;
   background: #0f0a14;
   color: #e8e4f0;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
 }
 
 #root {
@@ -98,21 +124,24 @@ body {
   margin: 0 0 0.75rem;
   font-size: 1.35rem;
   font-weight: 600;
+  font-family: var(--font-heading);
   color: #f0e6d2;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
 .page__desc {
   margin: 0 0 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #c4b8c8;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
+  font-family: var(--font-body);
 }
 
 .page__level {
   display: block;
   color: #b8860b;
   font-size: 0.8rem;
+  font-family: var(--font-body);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
