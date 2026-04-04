@@ -8,7 +8,9 @@ import {
   useState,
   type ReactElement,
 } from 'react'
+import Cover from './Cover'
 import Page from './Page'
+import { readStoredBookPage, writeStoredBookPage } from '../data/bookPageStorage'
 import { spells } from '../data/spells'
 import { useFlipBookSize } from '../hooks/useFlipBookSize'
 
@@ -28,17 +30,25 @@ type FlipBookRef = {
 }
 
 export default function Book() {
-  const spreadCount = Math.max(1, Math.ceil(spells.length / 2))
-  const pageCount = spreadCount * 2
+  const spellSpreadCount = Math.max(1, Math.ceil(spells.length / 2))
+  /** 1 couverture + 2 pages par spread de sorts + 1 quatrième de couverture */
+  const pageCount = 2 + 2 * spellSpreadCount
 
   const { pageWidth, pageHeight } = useFlipBookSize()
   const bookRef = useRef<FlipBookRef>(null)
 
-  const [pageIndex, setPageIndex] = useState(0)
+  const initialStartPage = useMemo(
+    () => readStoredBookPage(pageCount - 1),
+    [pageCount],
+  )
+
+  const [pageIndex, setPageIndex] = useState(initialStartPage)
 
   const flipPages = useMemo(() => {
-    const nodes: ReactElement[] = []
-    for (let s = 0; s < spreadCount; s++) {
+    const nodes: ReactElement[] = [
+      <Cover key="cover-front" variant="front" />,
+    ]
+    for (let s = 0; s < spellSpreadCount; s++) {
       nodes.push(
         <Page
           key={`spread-${s}-left`}
@@ -52,11 +62,13 @@ export default function Book() {
         />,
       )
     }
+    nodes.push(<Cover key="cover-back" variant="back" />)
     return nodes
-  }, [spreadCount])
+  }, [spellSpreadCount])
 
   const handleFlip = useCallback((e: { data: number }) => {
     setPageIndex(e.data)
+    writeStoredBookPage(e.data)
   }, [])
 
   const handleInit = useCallback((e: { data: { page: number } }) => {
@@ -111,11 +123,11 @@ export default function Book() {
           drawShadow
           flippingTime={750}
           usePortrait
-          startPage={0}
+          startPage={initialStartPage}
           startZIndex={0}
           autoSize
           maxShadowOpacity={0.55}
-          showCover={false}
+          showCover
           mobileScrollSupport
           clickEventForward
           useMouseEvents
