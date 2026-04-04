@@ -1,12 +1,14 @@
-export type SpellType = 'feu' | 'glace' | 'ombre' | 'arcane' | 'nature'
-
-export type Spell = {
-  id: string
-  name: string
-  description: string
-  level: number
-  type: SpellType
-  color: string
-}
-
-export const spells: Spell[] = []
+export const spells = [
+  {
+    id: 1,
+    name: 'Fireball',
+    description: 'Lance une boule de feu',
+    level: 'Avancé',
+  },
+  {
+    id: 2,
+    name: 'Ice Shield',
+    description: 'Crée un bouclier de glace',
+    level: 'Intermédiaire',
+  },
+]

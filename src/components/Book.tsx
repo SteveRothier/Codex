@@ -1,18 +1,28 @@
-import type { ReactNode } from 'react'
-import { Page } from './Page'
-import '../styles/book.css'
+import { useState } from 'react'
+import Page from './Page'
+import { spells } from '../data/spells'
 
-export type BookProps = {
-  leftPage?: ReactNode
-  rightPage?: ReactNode
-}
+export default function Book() {
+  const [currentPage, setCurrentPage] = useState(0)
 
-export function Book({ leftPage, rightPage }: BookProps) {
+  const nextPage = () => {
+    if (currentPage < spells.length - 1) setCurrentPage(currentPage + 1)
+  }
+
+  const prevPage = () => {
+    if (currentPage > 0) setCurrentPage(currentPage - 1)
+  }
+
   return (
-    <div className="book" role="region" aria-label="Grimoire ouvert">
-      <div className="book__spread">
-        <Page side="left">{leftPage}</Page>
-        <Page side="right">{rightPage}</Page>
+    <div className="book">
+      <Page spell={spells[currentPage]} />
+      <div className="controls">
+        <button type="button" onClick={prevPage}>
+          Prev
+        </button>
+        <button type="button" onClick={nextPage}>
+          Next
+        </button>
       </div>
     </div>
   )
