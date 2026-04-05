@@ -1189,6 +1189,24 @@ textarea {
   cursor: not-allowed;
 }
 
+.controls button.controls__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem;
+  min-width: 2.65rem;
+  min-height: 2.65rem;
+}
+
+.controls button.controls__icon-btn svg {
+  flex-shrink: 0;
+}
+
+.controls__icon-flip-x {
+  display: inline-flex;
+  transform: scaleX(-1);
+}
+
 @media (max-width: 640px) {
   .book {
     margin-top: 1rem;

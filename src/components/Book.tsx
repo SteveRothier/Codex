@@ -1,6 +1,12 @@
 import HTMLFlipBook from 'react-pageflip'
 import type { PageFlip } from 'page-flip'
 import {
+  Book as BookClosedIcon,
+  BookOpen,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react'
+import {
   useCallback,
   useEffect,
   useMemo,
@@ -22,6 +28,12 @@ import {
 import { readStoredBookPage, writeStoredBookPage } from '../data/bookPageStorage'
 import { weaponSpells } from '../data/weaponSpells'
 import { useFlipBookSize } from '../hooks/useFlipBookSize'
+
+const CONTROL_ICON_PROPS = {
+  size: 22,
+  strokeWidth: 2,
+  'aria-hidden': true as const,
+}
 
 function isTypingTarget(target: EventTarget | null) {
   if (!(target instanceof HTMLElement)) return false
@@ -199,30 +211,55 @@ export default function Book() {
       <div className="controls">
         <button
           type="button"
+          className="controls__icon-btn"
           onClick={goToClosedCover}
           disabled={pageIndex === 0}
+          aria-label="Retour à la couverture"
+          title="Retour à la couverture"
         >
-          Retour à la couverture
-        </button>
-        <button type="button" onClick={flipPrev} disabled={!canPrev}>
-          Page précédente
-        </button>
-        <button type="button" onClick={flipNext} disabled={!canNext}>
-          Page suivante
+          <BookClosedIcon {...CONTROL_ICON_PROPS} />
         </button>
         <button
           type="button"
+          className="controls__icon-btn"
           onClick={goToIndexSpread}
           disabled={onIndexSpread}
+          aria-label="Index et recherche"
+          title="Index et recherche"
         >
-          Index / recherche
+          <BookOpen {...CONTROL_ICON_PROPS} />
         </button>
         <button
           type="button"
+          className="controls__icon-btn"
+          onClick={flipPrev}
+          disabled={!canPrev}
+          aria-label="Page précédente"
+          title="Page précédente"
+        >
+          <ChevronLeft {...CONTROL_ICON_PROPS} />
+        </button>
+        <button
+          type="button"
+          className="controls__icon-btn"
+          onClick={flipNext}
+          disabled={!canNext}
+          aria-label="Page suivante"
+          title="Page suivante"
+        >
+          <ChevronRight {...CONTROL_ICON_PROPS} />
+        </button>
+        <button
+          type="button"
+          className="controls__icon-btn"
           onClick={goToBackCover}
           disabled={pageIndex === getBackCoverBookPage(pageCount)}
+          aria-label="Quatrième de couverture"
+          title="Quatrième de couverture"
         >
-          Quatrième de couverture
+          <span className="controls__icon-flip-x" aria-hidden>
+            <BookClosedIcon {...CONTROL_ICON_PROPS} />
+          </span>
         </button>
       </div>
     </div>
