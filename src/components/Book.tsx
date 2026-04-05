@@ -50,10 +50,11 @@ type FlipBookRef = {
   pageFlip: () => PageFlip | undefined
 }
 
-/** L’API runtime inclut `turnToPage` (saut sans animation) ; les types empaquetés sont incomplets. */
-function turnBookToPage(pf: PageFlip | undefined, page: number): void {
+/** Navigation avec animation de feuilletage (comme les coins / précédent–suivant). */
+function flipBookToPage(pf: PageFlip | undefined, page: number): void {
   if (!pf) return
-  ;(pf as unknown as { turnToPage: (n: number) => void }).turnToPage(page)
+  if (pf.getCurrentPageIndex() === page) return
+  pf.flip(page, 'top')
 }
 
 export default function Book() {
@@ -76,9 +77,7 @@ export default function Book() {
   const navigateToSpellIndex = useCallback((spellIndex: number) => {
     if (spellIndex < 0 || spellIndex >= weaponSpells.length) return
     const page = spellIndexToBookPage(spellIndex)
-    turnBookToPage(bookRef.current?.pageFlip(), page)
-    setPageIndex(page)
-    writeStoredBookPage(page)
+    flipBookToPage(bookRef.current?.pageFlip(), page)
   }, [])
 
   const flipPages = useMemo(() => {
@@ -133,22 +132,18 @@ export default function Book() {
   }
 
   const goToClosedCover = useCallback(() => {
-    turnBookToPage(bookRef.current?.pageFlip(), 0)
-    setPageIndex(0)
-    writeStoredBookPage(0)
+    flipBookToPage(bookRef.current?.pageFlip(), 0)
   }, [])
 
   const goToIndexSpread = useCallback(() => {
-    turnBookToPage(bookRef.current?.pageFlip(), INDEX_BOOK_PAGE)
-    setPageIndex(INDEX_BOOK_PAGE)
-    writeStoredBookPage(INDEX_BOOK_PAGE)
+    flipBookToPage(bookRef.current?.pageFlip(), INDEX_BOOK_PAGE)
   }, [])
 
   const goToBackCover = useCallback(() => {
-    const p = getBackCoverBookPage(pageCount)
-    turnBookToPage(bookRef.current?.pageFlip(), p)
-    setPageIndex(p)
-    writeStoredBookPage(p)
+    flipBookToPage(
+      bookRef.current?.pageFlip(),
+      getBackCoverBookPage(pageCount),
+    )
   }, [pageCount])
 
   const onIndexSpread =
