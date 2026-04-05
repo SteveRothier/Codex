@@ -61,9 +61,6 @@ export const BookIndexPageRight = forwardRef<
                     {isOpen ? '▼' : '▶'}
                   </span>
                   <span className="index-page__category-name">{c.weaponType}</span>
-                  <span className="index-page__category-count">
-                    {c.weapons.length}
-                  </span>
                 </button>
                 {isOpen ? (
                   <ul

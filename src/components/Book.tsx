@@ -118,6 +118,12 @@ export default function Book() {
     bookRef.current?.pageFlip()?.flipNext()
   }
 
+  const goToClosedCover = useCallback(() => {
+    turnBookToPage(bookRef.current?.pageFlip(), 0)
+    setPageIndex(0)
+    writeStoredBookPage(0)
+  }, [])
+
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
@@ -173,6 +179,13 @@ export default function Book() {
         </HTMLFlipBook>
       </div>
       <div className="controls">
+        <button
+          type="button"
+          onClick={goToClosedCover}
+          disabled={pageIndex === 0}
+        >
+          Retour à la couverture
+        </button>
         <button type="button" onClick={flipPrev} disabled={!canPrev}>
           Page précédente
         </button>

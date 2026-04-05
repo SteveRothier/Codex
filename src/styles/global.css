@@ -1122,16 +1122,6 @@ textarea {
   text-align: left;
 }
 
-.index-page__category-count {
-  flex-shrink: 0;
-  font-size: 0.7rem;
-  font-variant-numeric: tabular-nums;
-  color: #b8860b;
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.35);
-}
-
 .index-page__weapon-list {
   margin: 0 0 0.15rem 0.35rem;
   padding: 0.15rem 0 0.35rem 0.65rem;
