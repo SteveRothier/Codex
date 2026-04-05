@@ -100,6 +100,102 @@ textarea {
     0 4px 14px rgba(0, 0, 0, 0.65);
 }
 
+/*
+ * Matière couverture : rainures croisées façon reliure / cannage + halos,
+ * sans bruit aléatoire. GSAP anime background-position des deux premiers calques.
+ */
+.cover__tooling {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.94;
+  mix-blend-mode: overlay;
+  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat;
+  background-size:
+    180% 180%,
+    180% 180%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  background-position:
+    0% 0%,
+    0% 0%,
+    center,
+    center,
+    center;
+}
+
+.cover__tooling--front {
+  background-image:
+    repeating-linear-gradient(
+      52deg,
+      transparent 0,
+      transparent 3px,
+      rgba(0, 0, 0, 0.38) 3px,
+      rgba(0, 0, 0, 0.38) 5px
+    ),
+    repeating-linear-gradient(
+      -52deg,
+      transparent 0,
+      transparent 4px,
+      rgba(255, 255, 255, 0.16) 4px,
+      rgba(255, 255, 255, 0.16) 6px
+    ),
+    radial-gradient(
+      ellipse 92% 88% at 48% 42%,
+      transparent 0%,
+      transparent 32%,
+      rgba(8, 2, 10, 0.58) 100%
+    ),
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(201, 162, 39, 0.28) 0%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 92% 78%,
+      rgba(88, 28, 120, 0.24) 0%,
+      transparent 40%
+    );
+}
+
+.cover__tooling--back {
+  opacity: 0.88;
+  background-image:
+    repeating-linear-gradient(
+      128deg,
+      transparent 0,
+      transparent 4px,
+      rgba(0, 0, 0, 0.34) 4px,
+      rgba(0, 0, 0, 0.34) 6px
+    ),
+    repeating-linear-gradient(
+      -128deg,
+      transparent 0,
+      transparent 5px,
+      rgba(255, 255, 255, 0.13) 5px,
+      rgba(255, 255, 255, 0.13) 7px
+    ),
+    radial-gradient(
+      ellipse 95% 90% at 52% 55%,
+      transparent 0%,
+      transparent 34%,
+      rgba(6, 0, 8, 0.55) 100%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(201, 162, 39, 0.22) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 10% 88%,
+      rgba(60, 20, 80, 0.2) 0%,
+      transparent 40%
+    );
+}
+
 /* Tranche simulée (pages sous la couverture) */
 .cover__page-stack {
   position: absolute;
@@ -137,7 +233,7 @@ textarea {
 .cover__board {
   position: absolute;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2;
   border-radius: inherit;
 }
 
@@ -155,7 +251,7 @@ textarea {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
   border-radius: inherit;
   box-shadow:
     inset 5px 0 18px rgba(0, 0, 0, 0.35),
@@ -212,7 +308,7 @@ textarea {
 
 .cover__inner {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   max-width: 14rem;
 }
 
