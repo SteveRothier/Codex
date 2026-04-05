@@ -12,9 +12,11 @@ import Cover from './Cover'
 import { BookIndexPageLeft, BookIndexPageRight } from './BookIndexPage'
 import Page from './Page'
 import {
+  getBackCoverBookPage,
   getBookPageCount,
   getSpellSpreadCount,
   getWeaponCategories,
+  INDEX_BOOK_PAGE,
   spellIndexToBookPage,
 } from '../data/bookNavigation'
 import { readStoredBookPage, writeStoredBookPage } from '../data/bookPageStorage'
@@ -124,6 +126,22 @@ export default function Book() {
     writeStoredBookPage(0)
   }, [])
 
+  const goToIndexSpread = useCallback(() => {
+    turnBookToPage(bookRef.current?.pageFlip(), INDEX_BOOK_PAGE)
+    setPageIndex(INDEX_BOOK_PAGE)
+    writeStoredBookPage(INDEX_BOOK_PAGE)
+  }, [])
+
+  const goToBackCover = useCallback(() => {
+    const p = getBackCoverBookPage(pageCount)
+    turnBookToPage(bookRef.current?.pageFlip(), p)
+    setPageIndex(p)
+    writeStoredBookPage(p)
+  }, [pageCount])
+
+  const onIndexSpread =
+    pageIndex === INDEX_BOOK_PAGE || pageIndex === INDEX_BOOK_PAGE + 1
+
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
@@ -191,6 +209,20 @@ export default function Book() {
         </button>
         <button type="button" onClick={flipNext} disabled={!canNext}>
           Page suivante
+        </button>
+        <button
+          type="button"
+          onClick={goToIndexSpread}
+          disabled={onIndexSpread}
+        >
+          Index / recherche
+        </button>
+        <button
+          type="button"
+          onClick={goToBackCover}
+          disabled={pageIndex === getBackCoverBookPage(pageCount)}
+        >
+          Quatrième de couverture
         </button>
       </div>
     </div>

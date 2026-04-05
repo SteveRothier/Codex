@@ -13,8 +13,16 @@ export function getBookPageCount(): number {
   return 4 + 2 * getSpellSpreadCount()
 }
 
+/** Première page du double index (catégories + recherche : pages 1 et 2). */
+export const INDEX_BOOK_PAGE = 1
+
 /** Index de la première page de sort (après couverture + index). */
 export const FIRST_SPELL_BOOK_PAGE = 3
+
+/** Quatrième de couverture (dernière page du livre). */
+export function getBackCoverBookPage(bookPageCount: number): number {
+  return bookPageCount - 1
+}
 
 /** Page du livre (0-based) affichant le sort d’index `spellIndex`. */
 export function spellIndexToBookPage(spellIndex: number): number {
