@@ -1,5 +1,6 @@
 import { forwardRef, Fragment } from 'react'
 import type { WeaponSpell } from '../data/weaponSpells'
+import { SpellIcon } from './SpellIcon'
 
 /** Espace insécable étroit avant l’unité (usage typographique FR). */
 const U_NBSP = '\u202f'
@@ -221,29 +222,6 @@ function DescriptionContent({ description }: { description: string }) {
 export type PageProps = {
   side: 'left' | 'right'
   spell: WeaponSpell | null
-}
-
-function SpellIcon({ icon, label }: { icon: string; label: string }) {
-  const isUrl = /^https?:\/\//i.test(icon)
-  if (isUrl) {
-    return (
-      <span className="page__icon page__icon--img" aria-hidden="true">
-        <img
-          src={icon}
-          alt=""
-          className="page__icon-img"
-          loading="lazy"
-          decoding="async"
-          referrerPolicy="no-referrer"
-        />
-      </span>
-    )
-  }
-  return (
-    <span className="page__icon" aria-hidden="true" title={label}>
-      {icon}
-    </span>
-  )
 }
 
 const Page = forwardRef<HTMLDivElement, PageProps>(function Page(

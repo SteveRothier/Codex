@@ -1,4 +1,5 @@
-const STORAGE_KEY = 'codex-book-page'
+/** v2 : index sur les pages 1–2 après la couverture (anciennes clés ignorées). */
+const STORAGE_KEY = 'codex-book-page-v2'
 
 export function readStoredBookPage(maxIndex: number): number {
   if (typeof window === 'undefined') return 0

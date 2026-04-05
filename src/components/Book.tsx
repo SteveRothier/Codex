@@ -9,7 +9,14 @@ import {
   type ReactElement,
 } from 'react'
 import Cover from './Cover'
+import { BookIndexPageLeft, BookIndexPageRight } from './BookIndexPage'
 import Page from './Page'
+import {
+  getBookPageCount,
+  getSpellSpreadCount,
+  getWeaponCategories,
+  spellIndexToBookPage,
+} from '../data/bookNavigation'
 import { readStoredBookPage, writeStoredBookPage } from '../data/bookPageStorage'
 import { weaponSpells } from '../data/weaponSpells'
 import { useFlipBookSize } from '../hooks/useFlipBookSize'
@@ -29,13 +36,21 @@ type FlipBookRef = {
   pageFlip: () => PageFlip | undefined
 }
 
+/** L’API runtime inclut `turnToPage` (saut sans animation) ; les types empaquetés sont incomplets. */
+function turnBookToPage(pf: PageFlip | undefined, page: number): void {
+  if (!pf) return
+  ;(pf as unknown as { turnToPage: (n: number) => void }).turnToPage(page)
+}
+
 export default function Book() {
-  const spellSpreadCount = Math.max(1, Math.ceil(weaponSpells.length / 2))
-  /** 1 couverture + 2 pages par spread de sorts + 1 quatrième de couverture */
-  const pageCount = 2 + 2 * spellSpreadCount
+  const spellSpreadCount = getSpellSpreadCount()
+  /** 1 couverture + 2 (index) + 2 pages par spread de sorts + 1 quatrième de couverture */
+  const pageCount = getBookPageCount()
 
   const { pageWidth, pageHeight } = useFlipBookSize()
   const bookRef = useRef<FlipBookRef>(null)
+
+  const categories = useMemo(() => getWeaponCategories(), [])
 
   const initialStartPage = useMemo(
     () => readStoredBookPage(pageCount - 1),
@@ -44,9 +59,26 @@ export default function Book() {
 
   const [pageIndex, setPageIndex] = useState(initialStartPage)
 
+  const navigateToSpellIndex = useCallback((spellIndex: number) => {
+    if (spellIndex < 0 || spellIndex >= weaponSpells.length) return
+    const page = spellIndexToBookPage(spellIndex)
+    turnBookToPage(bookRef.current?.pageFlip(), page)
+    setPageIndex(page)
+    writeStoredBookPage(page)
+  }, [])
+
   const flipPages = useMemo(() => {
     const nodes: ReactElement[] = [
       <Cover key="cover-front" variant="front" />,
+      <BookIndexPageRight
+        key="index-categories"
+        categories={categories}
+        onPickSpell={navigateToSpellIndex}
+      />,
+      <BookIndexPageLeft
+        key="index-search"
+        onPickSpell={navigateToSpellIndex}
+      />,
     ]
     for (let s = 0; s < spellSpreadCount; s++) {
       nodes.push(
@@ -64,7 +96,7 @@ export default function Book() {
     }
     nodes.push(<Cover key="cover-back" variant="back" />)
     return nodes
-  }, [spellSpreadCount])
+  }, [spellSpreadCount, categories, navigateToSpellIndex])
 
   const handleFlip = useCallback((e: { data: number }) => {
     setPageIndex(e.data)

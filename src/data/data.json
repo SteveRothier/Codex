@@ -56,6 +56,24 @@
     },
     {
       "weapon": {
+        "name": "Carrioncaller",
+        "subcategoryName": "Axe"
+      },
+      "spell": {
+        "name": "Morgana Raven",
+        "icon": "https://render.albiononline.com/v1/spell/Morgana%20Raven.png?size=217&locale=en",
+        "description": "Send a transcendent raven in the targeted direction, piercing through all enemies and dealing 387 physical damage.\nInflicts a bleed dealing 329 physical damage over 3s.\nReduces Healing Received by 40% for 4s.",
+        "energyCost": 62,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 20,
+        "rangeLabel": "20m",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
         "name": "Infernal Scythe",
         "subcategoryName": "Axe"
       },
@@ -362,6 +380,24 @@
     },
     {
       "weapon": {
+        "name": "Hammer",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "name": "Earth Shatter",
+        "icon": "https://render.albiononline.com/v1/spell/HAMMERWHIRLWIND2.png?size=217&locale=en",
+        "description": "Shatter the earth in a 5.5m radius around you, dealing 191 physical damage to all enemies hit.\nStuns for 3.15s.\nMakes you the highest-priority target for all mobs hit.",
+        "energyCost": 43,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 0,
+        "rangeLabel": "Self",
+        "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
         "name": "Great Hammer",
         "subcategoryName": "Hammer"
       },
@@ -447,6 +483,24 @@
         "isChanneled": false,
         "rangeM": 14,
         "rangeLabel": "14m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Hand of Justice",
+        "subcategoryName": "Hammer"
+      },
+      "spell": {
+        "name": "Onslaught",
+        "icon": "https://render.albiononline.com/v1/spell/SPINNING_SMASH.png?size=217&locale=en",
+        "description": "Spin towards the targeted position, whirling your hammer in a 3.5m radius around you for 1s.\nPulls up to 10 enemies you pass through along with you, stunning them for 1.23s.\nDeals 85 physical damage every 0.2s.\nUpon reaching the targeted position, slam your hammer on the ground after 0.5s, throwing all enemies within a 5m radius into the air for 0.5s.\nDeals 353 physical damage.",
+        "energyCost": 66,
+        "castTimeS": 0,
+        "castTimeLabel": "0s",
+        "isChanneled": false,
+        "rangeM": 13,
+        "rangeLabel": "13m",
         "cooldownS": 30
       }
     },
@@ -1114,6 +1168,24 @@
         "rangeM": 2,
         "rangeLabel": "2m",
         "cooldownS": 15
+      }
+    },
+    {
+      "weapon": {
+        "name": "Claws",
+        "subcategoryName": "Dagger"
+      },
+      "spell": {
+        "name": "Disembowel",
+        "icon": "https://render.albiononline.com/v1/spell/Disembowel.png?size=217&locale=en",
+        "description": "Pin the targeted enemy in place, rooting them while channeling for 1.9s.\nDeals 170 physical damage every 0.3s.\nRepeatedly interrupts spell casting.\nBreaks any shields active on the target.\nThe last hit applies a bleed, dealing 499 physical damage over 3s (this also happens if the channel is interrupted).\n\nIf the target moves more than 6m, the channel will be interrupted.",
+        "energyCost": 57,
+        "castTimeS": 0,
+        "castTimeLabel": "1.9s channeled",
+        "isChanneled": true,
+        "rangeM": 2,
+        "rangeLabel": "2m",
+        "cooldownS": 25
       }
     },
     {
@@ -1923,6 +1995,24 @@
         "isChanneled": false,
         "rangeM": 12,
         "rangeLabel": "12m",
+        "cooldownS": 30
+      }
+    },
+    {
+      "weapon": {
+        "name": "Shadowcaller",
+        "subcategoryName": "Cursed Staff"
+      },
+      "spell": {
+        "name": "Inner Shadow",
+        "icon": "https://render.albiononline.com/v1/spell/Inner%20Shadow.png?size=217&locale=en",
+        "description": "Reveal the Inner Shadow of the targeted player, dealing damage to all enemies within a 5m radius.\nFor targets wearing cloth armor:\nLasts for 5.2s.\nDeals 189 magical damage (vs. players)/92 magical damage (vs. mobs) every 0.5s (this damage cannot be reflected).\n\nFor targets wearing leather armor:\nLasts for 2s.\nDeals 115 magical damage (vs. players) / 47 magical damage (vs. mobs) every 0.5s (this damage cannot be reflected). Steals 100% of the Health the enemy has lost.\n\nFor targets wearing plate armor:\nSlows all enemies within the area by 40% for 2.2s.\nAfter 1.5s, the shadow hits all enemies within the area, dealing 413 physical damage (this damage cannot be reflected).\nReduces the damage resistances of all enemies hit by 87 for 5s.",
+        "energyCost": 60,
+        "castTimeS": 0.4,
+        "castTimeLabel": "0.4s",
+        "isChanneled": false,
+        "rangeM": 15,
+        "rangeLabel": "15m",
         "cooldownS": 30
       }
     },
