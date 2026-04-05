@@ -231,7 +231,7 @@ export default function Book() {
         </button>
         <button
           type="button"
-          className="controls__icon-btn"
+          className="controls__icon-btn controls__icon-btn--page"
           onClick={flipPrev}
           disabled={!canPrev}
           aria-label="Page précédente"
@@ -241,7 +241,7 @@ export default function Book() {
         </button>
         <button
           type="button"
-          className="controls__icon-btn"
+          className="controls__icon-btn controls__icon-btn--page"
           onClick={flipNext}
           disabled={!canNext}
           aria-label="Page suivante"

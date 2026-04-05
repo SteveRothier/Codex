@@ -1202,6 +1202,11 @@ textarea {
   flex-shrink: 0;
 }
 
+.controls button.controls__icon-btn--page {
+  min-width: 3rem;
+  padding-inline: 0.85rem;
+}
+
 .controls__icon-flip-x {
   display: inline-flex;
   transform: scaleX(-1);
