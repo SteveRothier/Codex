@@ -18,6 +18,9 @@
   --paper-mid: #242018;
   --paper-fiber: rgba(92, 78, 58, 0.12);
   --paper-edge: rgba(45, 38, 32, 0.9);
+  --page-ink: rgba(28, 22, 18, 0.45);
+  --page-gold-faint: rgba(201, 162, 39, 0.22);
+  --page-gold-line: rgba(184, 134, 11, 0.35);
 }
 
 html {
@@ -389,8 +392,18 @@ textarea {
   background-color: var(--paper-base);
   background-image:
     radial-gradient(
+      ellipse 55% 40% at 12% 8%,
+      rgba(201, 162, 39, 0.04),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 45% 35% at 92% 88%,
+      rgba(88, 48, 120, 0.05),
+      transparent 50%
+    ),
+    radial-gradient(
       ellipse 120% 80% at 50% 0%,
-      rgba(255, 248, 235, 0.04),
+      rgba(255, 248, 235, 0.055),
       transparent 55%
     ),
     linear-gradient(
@@ -400,25 +413,105 @@ textarea {
       #16130f 100%
     );
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    inset 0 -3px 12px rgba(0, 0, 0, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -3px 14px rgba(0, 0, 0, 0.28),
+    inset 0 0 80px rgba(20, 14, 10, 0.35);
 }
 
-/* Texture fibres / grain papier */
+/* Cadre intérieur type grimoire (sous gouttière, au-dessus du fond) */
+.page::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  border: 1px solid var(--page-gold-faint);
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.35),
+    inset 0 0 24px rgba(0, 0, 0, 0.12);
+}
+
+/*
+ * Pas de cadre sur le bord reliure ; haut / bas s’estompent vers la gouttière
+ * (masque horizontal — le bord tranche reste bien opaque).
+ */
+.page--left::before {
+  inset: 7px 18px 7px 9px;
+  border-radius: 7px 1px 1px 7px;
+  border-right: none;
+  box-shadow:
+    inset 1px 0 0 0 rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 0 rgba(0, 0, 0, 0.35),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.35),
+    inset 0 0 24px rgba(0, 0, 0, 0.12);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 48%,
+    rgba(0, 0, 0, 0.65) 64%,
+    rgba(0, 0, 0, 0.2) 82%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    #000 0%,
+    #000 48%,
+    rgba(0, 0, 0, 0.65) 64%,
+    rgba(0, 0, 0, 0.2) 82%,
+    transparent 100%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.page--right::before {
+  inset: 7px 9px 7px 18px;
+  border-radius: 1px 7px 7px 1px;
+  border-left: none;
+  box-shadow:
+    inset -1px 0 0 0 rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 0 rgba(0, 0, 0, 0.35),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.35),
+    inset 0 0 24px rgba(0, 0, 0, 0.12);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 18%,
+    rgba(0, 0, 0, 0.65) 36%,
+    #000 52%,
+    #000 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 18%,
+    rgba(0, 0, 0, 0.65) 36%,
+    #000 52%,
+    #000 100%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* Texture fibres / parchemin */
 .page__texture {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
   border-radius: inherit;
-  opacity: 0.55;
+  opacity: 0.68;
   background-image:
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.14) 0%,
-      transparent 14%,
-      transparent 86%,
-      rgba(0, 0, 0, 0.18) 100%
+      rgba(0, 0, 0, 0.16) 0%,
+      transparent 12%,
+      transparent 88%,
+      rgba(0, 0, 0, 0.2) 100%
     ),
     repeating-linear-gradient(
       0deg,
@@ -431,8 +524,27 @@ textarea {
       88deg,
       transparent,
       transparent 17px,
-      rgba(70, 58, 45, 0.04) 17px,
-      rgba(70, 58, 45, 0.04) 18px
+      rgba(70, 58, 45, 0.055) 17px,
+      rgba(70, 58, 45, 0.055) 18px
+    ),
+    repeating-linear-gradient(
+      92deg,
+      transparent,
+      transparent 31px,
+      rgba(40, 32, 26, 0.03) 31px,
+      rgba(40, 32, 26, 0.03) 32px
+    ),
+    radial-gradient(
+      circle at 20% 30%,
+      transparent 0%,
+      transparent 60%,
+      var(--page-ink) 100%
+    ),
+    radial-gradient(
+      circle at 78% 65%,
+      transparent 0%,
+      transparent 55%,
+      var(--page-ink) 100%
     );
   mix-blend-mode: soft-light;
 }
@@ -551,6 +663,16 @@ textarea {
   justify-content: center;
   font-size: 2.15rem;
   line-height: 1;
+  border-radius: 8px;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(35, 28, 22, 0.5) 100%
+  );
+  border: 1px solid rgba(201, 162, 39, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .page__icon--img {
@@ -558,11 +680,11 @@ textarea {
 }
 
 .page__icon-img {
-  width: 100%;
-  height: 100%;
+  width: 88%;
+  height: 88%;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.55));
 }
 
 .page__headlines {
@@ -598,9 +720,12 @@ textarea {
   font-size: 1.15rem;
   font-weight: 600;
   font-family: var(--font-heading);
-  color: #f0e6d2;
+  color: #f5ebd8;
   letter-spacing: 0.03em;
   line-height: 1.2;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 28px rgba(138, 43, 226, 0.12);
 }
 
 .page__weapon {
@@ -619,9 +744,10 @@ textarea {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE / Edge ancien */
   line-height: 1.55;
-  color: #c4b8c8;
+  color: #d2c8d8;
   font-size: 0.88rem;
   font-family: var(--font-body);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
 .page__desc::-webkit-scrollbar {
@@ -702,10 +828,17 @@ textarea {
   gap: 0.45rem 0.65rem;
   flex-shrink: 0;
   margin: 0;
-  padding: 0.55rem 0.65rem;
+  padding: 0.6rem 0.7rem;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.28);
-  border: 1px solid rgba(90, 78, 68, 0.5);
+  background: linear-gradient(
+    152deg,
+    rgba(22, 18, 14, 0.92) 0%,
+    rgba(10, 8, 6, 0.88) 100%
+  );
+  border: 1px solid rgba(120, 98, 72, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.45);
 }
 
 .page__stat {
@@ -810,6 +943,16 @@ textarea {
     border-radius: 8px;
     border: 1px solid rgba(55, 48, 40, 0.85);
     padding: 1.35rem 1.25rem;
+  }
+
+  .page--left::before {
+    inset: 6px 14px 6px 7px;
+    border-radius: 6px 1px 1px 6px;
+  }
+
+  .page--right::before {
+    inset: 6px 7px 6px 14px;
+    border-radius: 1px 6px 6px 1px;
   }
 
   .page__fore-edge {
