@@ -209,58 +209,78 @@ export default function Book() {
         </HTMLFlipBook>
       </div>
       <div className="controls">
-        <button
-          type="button"
-          className="controls__icon-btn"
-          onClick={goToClosedCover}
-          disabled={pageIndex === 0}
-          aria-label="Retour à la couverture"
-          title="Retour à la couverture"
+        <span
+          className="controls__tip-host"
+          data-tooltip="Retour à la couverture"
         >
-          <BookClosedIcon {...CONTROL_ICON_PROPS} />
-        </button>
-        <button
-          type="button"
-          className="controls__icon-btn"
-          onClick={goToIndexSpread}
-          disabled={onIndexSpread}
-          aria-label="Index et recherche"
-          title="Index et recherche"
-        >
-          <BookOpen {...CONTROL_ICON_PROPS} />
-        </button>
-        <button
-          type="button"
-          className="controls__icon-btn controls__icon-btn--page"
-          onClick={flipPrev}
-          disabled={!canPrev}
-          aria-label="Page précédente"
-          title="Page précédente"
-        >
-          <ChevronLeft {...CONTROL_ICON_PROPS} />
-        </button>
-        <button
-          type="button"
-          className="controls__icon-btn controls__icon-btn--page"
-          onClick={flipNext}
-          disabled={!canNext}
-          aria-label="Page suivante"
-          title="Page suivante"
-        >
-          <ChevronRight {...CONTROL_ICON_PROPS} />
-        </button>
-        <button
-          type="button"
-          className="controls__icon-btn"
-          onClick={goToBackCover}
-          disabled={pageIndex === getBackCoverBookPage(pageCount)}
-          aria-label="Quatrième de couverture"
-          title="Quatrième de couverture"
-        >
-          <span className="controls__icon-flip-x" aria-hidden>
+          <button
+            type="button"
+            className="controls__icon-btn"
+            onClick={goToClosedCover}
+            disabled={pageIndex === 0}
+            aria-label="Retour à la couverture"
+          >
             <BookClosedIcon {...CONTROL_ICON_PROPS} />
-          </span>
-        </button>
+          </button>
+        </span>
+        <span
+          className="controls__tip-host"
+          data-tooltip="Index et recherche"
+        >
+          <button
+            type="button"
+            className="controls__icon-btn"
+            onClick={goToIndexSpread}
+            disabled={onIndexSpread}
+            aria-label="Index et recherche"
+          >
+            <BookOpen {...CONTROL_ICON_PROPS} />
+          </button>
+        </span>
+        <span
+          className="controls__tip-host"
+          data-tooltip="Page précédente"
+        >
+          <button
+            type="button"
+            className="controls__icon-btn controls__icon-btn--page"
+            onClick={flipPrev}
+            disabled={!canPrev}
+            aria-label="Page précédente"
+          >
+            <ChevronLeft {...CONTROL_ICON_PROPS} />
+          </button>
+        </span>
+        <span
+          className="controls__tip-host"
+          data-tooltip="Page suivante"
+        >
+          <button
+            type="button"
+            className="controls__icon-btn controls__icon-btn--page"
+            onClick={flipNext}
+            disabled={!canNext}
+            aria-label="Page suivante"
+          >
+            <ChevronRight {...CONTROL_ICON_PROPS} />
+          </button>
+        </span>
+        <span
+          className="controls__tip-host"
+          data-tooltip="Quatrième de couverture"
+        >
+          <button
+            type="button"
+            className="controls__icon-btn"
+            onClick={goToBackCover}
+            disabled={pageIndex === getBackCoverBookPage(pageCount)}
+            aria-label="Quatrième de couverture"
+          >
+            <span className="controls__icon-flip-x" aria-hidden>
+              <BookClosedIcon {...CONTROL_ICON_PROPS} />
+            </span>
+          </button>
+        </span>
       </div>
     </div>
   )

@@ -1164,6 +1164,9 @@ textarea {
   gap: 0.5rem;
   justify-content: center;
   margin-top: 1.5rem;
+  padding-bottom: 2.1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .controls button {
@@ -1205,6 +1208,68 @@ textarea {
 .controls button.controls__icon-btn--page {
   min-width: 3rem;
   padding-inline: 0.85rem;
+}
+
+.controls__tip-host {
+  position: relative;
+  display: inline-flex;
+  vertical-align: top;
+}
+
+.controls__tip-host > button.controls__icon-btn:disabled {
+  pointer-events: none;
+}
+
+.controls__tip-host::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 0.4rem);
+  z-index: 20;
+  padding: 0.32rem 0.65rem;
+  max-width: min(90vw, 22rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #e8dcc8;
+  text-align: center;
+  line-height: 1.25;
+  background: linear-gradient(
+    165deg,
+    rgba(36, 28, 42, 0.97) 0%,
+    rgba(22, 18, 28, 0.98) 100%
+  );
+  border: 1px solid rgba(139, 90, 168, 0.45);
+  border-radius: 5px;
+  box-shadow:
+    0 0 0 1px rgba(201, 162, 39, 0.12),
+    0 6px 18px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(88, 28, 135, 0.22);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(3px);
+  /* Sortie immédiate (sans délai) */
+  transition:
+    opacity 0.12s ease 0s,
+    transform 0.12s ease 0s,
+    visibility 0s linear 0.12s;
+}
+
+.controls__tip-host:hover::after,
+.controls__tip-host:has(.controls__icon-btn:focus-visible)::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  /* Affichage après ~0,45 s (survol ou focus clavier — pas après clic souris) */
+  transition:
+    opacity 0.18s ease 0.45s,
+    transform 0.18s ease 0.45s,
+    visibility 0s linear 0.45s;
 }
 
 .controls__icon-flip-x {
