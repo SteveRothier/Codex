@@ -1,5 +1,6 @@
 import gsap from 'gsap'
 import { forwardRef, useLayoutEffect, useRef } from 'react'
+import { CoverRune } from './CoverRune'
 
 export type CoverProps = {
   variant: 'front' | 'back'
@@ -57,11 +58,8 @@ const Cover = forwardRef<HTMLDivElement, CoverProps>(function Cover(
       <div className="cover__inner">
         {isFront ? (
           <>
-            <p className="cover__eyebrow">Grimoire</p>
-            <h1 className="cover__title">Codex</h1>
-            <p className="cover__subtitle">Arcanes & sortilèges</p>
-            <div className="cover__ornament" aria-hidden="true" />
-            <p className="cover__hint">Tournez la page pour ouvrir</p>
+            <CoverRune />
+            <h1 className="cover__title cover__title--solo">Codex</h1>
           </>
         ) : (
           <>

@@ -78,17 +78,25 @@ textarea {
 .app-shell__main {
   position: relative;
   z-index: 1;
+  min-height: 100dvh;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.5rem 1rem;
+  box-sizing: border-box;
 }
 
 .book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 960px;
   width: calc(100% - 2rem);
-  margin: 1.75rem auto;
+  margin: 0 auto;
   padding: 0 0.5rem;
+  flex: 0 1 auto;
 }
 
 .book__flip-wrap {
@@ -337,13 +345,15 @@ textarea {
   max-width: 14rem;
 }
 
-.cover__eyebrow {
-  margin: 0 0 0.5rem;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: #b8860b;
+.cover--front .cover__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  max-width: none;
+  width: 100%;
+  margin: 0;
 }
 
 .cover__title {
@@ -356,12 +366,129 @@ textarea {
   text-shadow: 0 0 24px rgba(138, 43, 226, 0.45);
 }
 
-.cover__subtitle {
-  margin: 0 0 1.25rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: #a898b0;
-  font-style: italic;
+.cover__title--solo {
+  margin: 0;
+  font-size: clamp(2rem, 6.5vw, 2.75rem);
+  letter-spacing: 0.28em;
+  text-indent: 0.28em;
+}
+
+/* Rune interactive — couverture avant */
+.cover-rune {
+  width: clamp(5.25rem, 26vw, 7.25rem);
+  height: clamp(5.25rem, 26vw, 7.25rem);
+  flex-shrink: 0;
+  perspective: 420px;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  transition: transform 0.2s ease;
+}
+
+.cover-rune:focus-visible {
+  box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.65);
+  border-radius: 12px;
+}
+
+.cover-rune__tilt {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.12s ease-out;
+}
+
+.cover-rune__svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: filter 0.25s ease;
+  filter: drop-shadow(0 0 5px rgba(138, 43, 226, 0.4))
+    drop-shadow(0 0 10px rgba(201, 162, 39, 0.2));
+}
+
+.cover-rune:hover .cover-rune__svg {
+  filter: drop-shadow(0 0 10px rgba(201, 162, 39, 0.55))
+    drop-shadow(0 0 18px rgba(138, 43, 226, 0.5));
+}
+
+.cover-rune__glow {
+  transform-origin: 50px 50px;
+  animation: cover-rune-pulse 2.8s ease-in-out infinite;
+}
+
+.cover-rune__orbit {
+  transform-origin: 50px 50px;
+  animation: cover-rune-orbit 22s linear infinite;
+}
+
+.cover-rune__ring--outer {
+  animation: cover-rune-ring 5s ease-in-out infinite;
+}
+
+@keyframes cover-rune-pulse {
+  0%,
+  100% {
+    opacity: 0.82;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes cover-rune-orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cover-rune-ring {
+  0%,
+  100% {
+    stroke-opacity: 0.75;
+  }
+  50% {
+    stroke-opacity: 1;
+  }
+}
+
+.cover-rune--burst .cover-rune__svg {
+  animation: cover-rune-burst 0.52s ease-out;
+}
+
+@keyframes cover-rune-burst {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.5));
+  }
+  35% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 22px rgba(232, 200, 120, 0.9))
+      drop-shadow(0 0 28px rgba(138, 43, 226, 0.65));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(138, 43, 226, 0.4))
+      drop-shadow(0 0 10px rgba(201, 162, 39, 0.2));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-rune__glow,
+  .cover-rune__orbit,
+  .cover-rune__ring--outer {
+    animation: none;
+  }
+
+  .cover-rune--burst .cover-rune__svg {
+    animation: none;
+  }
+
+  .cover-rune__tilt {
+    transition: none;
+  }
+
+  .cover-rune__svg {
+    transition: filter 0.2s ease;
+  }
 }
 
 .cover__ornament {
@@ -379,13 +506,6 @@ textarea {
   width: 2rem;
   height: 2rem;
   margin-bottom: 1rem;
-}
-
-.cover__hint {
-  margin: 0;
-  font-size: 0.78rem;
-  color: #7a6b82;
-  letter-spacing: 0.06em;
 }
 
 .cover__back-title {
@@ -1300,8 +1420,8 @@ textarea {
 }
 
 @media (max-width: 640px) {
-  .book {
-    margin-top: 1rem;
+  .app-shell__main {
+    padding: 0.5rem 0.35rem 0.75rem;
   }
 
   .cover__page-stack {
