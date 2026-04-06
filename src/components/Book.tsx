@@ -123,13 +123,13 @@ export default function Book() {
   const canPrev = pageIndex > 0
   const canNext = pageIndex + 2 < pageCount
 
-  const flipPrev = () => {
+  const flipPrev = useCallback(() => {
     bookRef.current?.pageFlip()?.flipPrev()
-  }
+  }, [])
 
-  const flipNext = () => {
+  const flipNext = useCallback(() => {
     bookRef.current?.pageFlip()?.flipNext()
-  }
+  }, [])
 
   const goToClosedCover = useCallback(() => {
     flipBookToPage(bookRef.current?.pageFlip(), 0)
@@ -150,24 +150,56 @@ export default function Book() {
     pageIndex === INDEX_BOOK_PAGE || pageIndex === INDEX_BOOK_PAGE + 1
 
   useEffect(() => {
+    const lastPage = getBackCoverBookPage(pageCount)
+
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
       if (isTypingTarget(e.target)) return
 
       if (e.key === 'ArrowLeft') {
         if (!canPrev) return
         e.preventDefault()
         flipPrev()
-      } else {
+        return
+      }
+      if (e.key === 'ArrowRight') {
         if (!canNext) return
         e.preventDefault()
         flipNext()
+        return
+      }
+      if (e.key === 'Home') {
+        if (pageIndex === 0) return
+        e.preventDefault()
+        goToClosedCover()
+        return
+      }
+      if (e.key === 'End') {
+        if (pageIndex === lastPage) return
+        e.preventDefault()
+        goToBackCover()
+        return
+      }
+      if (e.key === 'i' || e.key === 'I') {
+        if (onIndexSpread) return
+        e.preventDefault()
+        goToIndexSpread()
       }
     }
 
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [canPrev, canNext])
+  }, [
+    canPrev,
+    canNext,
+    pageIndex,
+    pageCount,
+    onIndexSpread,
+    flipPrev,
+    flipNext,
+    goToClosedCover,
+    goToBackCover,
+    goToIndexSpread,
+  ])
 
   return (
     <div className="book">
@@ -206,70 +238,70 @@ export default function Book() {
       <div className="controls">
         <span
           className="controls__tip-host"
-          data-tooltip="Retour à la couverture"
+          data-tooltip="Retour à la couverture · Début"
         >
           <button
             type="button"
             className="controls__icon-btn"
             onClick={goToClosedCover}
             disabled={pageIndex === 0}
-            aria-label="Retour à la couverture"
+            aria-label="Retour à la couverture, raccourci touche Début"
           >
             <BookClosedIcon {...CONTROL_ICON_PROPS} />
           </button>
         </span>
         <span
           className="controls__tip-host"
-          data-tooltip="Index et recherche"
+          data-tooltip="Index et recherche · I"
         >
           <button
             type="button"
             className="controls__icon-btn"
             onClick={goToIndexSpread}
             disabled={onIndexSpread}
-            aria-label="Index et recherche"
+            aria-label="Index et recherche, raccourci touche I"
           >
             <BookOpen {...CONTROL_ICON_PROPS} />
           </button>
         </span>
         <span
           className="controls__tip-host"
-          data-tooltip="Page précédente"
+          data-tooltip="Page précédente · flèche gauche"
         >
           <button
             type="button"
             className="controls__icon-btn controls__icon-btn--page"
             onClick={flipPrev}
             disabled={!canPrev}
-            aria-label="Page précédente"
+            aria-label="Page précédente, raccourci flèche gauche"
           >
             <ChevronLeft {...CONTROL_ICON_PROPS} />
           </button>
         </span>
         <span
           className="controls__tip-host"
-          data-tooltip="Page suivante"
+          data-tooltip="Page suivante · flèche droite"
         >
           <button
             type="button"
             className="controls__icon-btn controls__icon-btn--page"
             onClick={flipNext}
             disabled={!canNext}
-            aria-label="Page suivante"
+            aria-label="Page suivante, raccourci flèche droite"
           >
             <ChevronRight {...CONTROL_ICON_PROPS} />
           </button>
         </span>
         <span
           className="controls__tip-host"
-          data-tooltip="Quatrième de couverture"
+          data-tooltip="Quatrième de couverture · Fin"
         >
           <button
             type="button"
             className="controls__icon-btn"
             onClick={goToBackCover}
             disabled={pageIndex === getBackCoverBookPage(pageCount)}
-            aria-label="Quatrième de couverture"
+            aria-label="Quatrième de couverture, raccourci touche Fin"
           >
             <span className="controls__icon-flip-x" aria-hidden>
               <BookClosedIcon {...CONTROL_ICON_PROPS} />
