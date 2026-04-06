@@ -38,4 +38,4 @@ npm run lint
 
 ## Données
 
-Les entrées sorts / armes s’appuient sur des données de type **OpenAlbion** relatives à **Albion Online**. Ce dépôt est une **démo front-end** à but non commercial pour portfolio ; droits sur les noms et visuels du jeu : leurs détenteurs respectifs.
+Les entrées sorts / armes s’appuient sur des données de type **OpenAlbion API** relatives à **Albion Online**. Ce dépôt est une **démo front-end** à but non commercial pour portfolio ; droits sur les noms et visuels du jeu : leurs détenteurs respectifs.
