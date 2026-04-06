@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# Codex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Grimoire interactif en **React** : pages qui se tournent, couvertures illustrées, index des sorts par arme et ambiance visuelle soignée. Ce dépôt sert de **vitrine technique** sur mon portfolio : démo en ligne, code lisible, stack moderne.
 
-Currently, two official plugins are available:
+## Démo en ligne
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[codex-iota-wheat.vercel.app](https://codex-iota-wheat.vercel.app)**
 
-## React Compiler
+## Ce que le projet montre
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interface type **livre** (`react-pageflip` / StPageFlip), navigation clavier et contrôles accessibles.
+- **Données structurées** (JSON + typage TypeScript) pour les sorts et catégories d’armes.
+- **Animations** (GSAP sur les couvertures, particules en arrière-plan).
+- **UI** cohérente (typographie Cinzel, thème sombre, favicon dérivé de la rune de couverture).
+- Déploiement **Vercel** (build statique Vite).
 
-## Expanding the ESLint configuration
+## Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Domaine    | Choix                 |
+| ---------- | --------------------- |
+| Framework  | React 19 + TypeScript |
+| Build      | Vite 8                |
+| Livre      | react-pageflip        |
+| Animations | GSAP                  |
+| Icônes     | Lucide React          |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Installation et scripts
+
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # sortie dans dist/
+npm run preview  # prévisualiser la build
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Données
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Les entrées sorts / armes s’appuient sur des données de type **OpenAlbion** relatives à **Albion Online**. Ce dépôt est une **démo front-end** à but non commercial pour portfolio ; droits sur les noms et visuels du jeu : leurs détenteurs respectifs.
