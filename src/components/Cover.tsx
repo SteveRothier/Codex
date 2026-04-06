@@ -58,14 +58,16 @@ const Cover = forwardRef<HTMLDivElement, CoverProps>(function Cover(
       <div className="cover__inner">
         {isFront ? (
           <>
-            <CoverRune />
+            <CoverRune variant="front" />
             <h1 className="cover__title cover__title--solo">Codex</h1>
           </>
         ) : (
           <>
-            <div className="cover__ornament cover__ornament--small" aria-hidden="true" />
-            <p className="cover__back-title">Codex</p>
-            <p className="cover__back-line">Fin du volume</p>
+            <CoverRune variant="back" />
+            <h1 className="cover__title cover__title--solo cover__title--back">
+              Codex
+            </h1>
+            <p className="cover__epilog">Fin du volume</p>
           </>
         )}
       </div>
